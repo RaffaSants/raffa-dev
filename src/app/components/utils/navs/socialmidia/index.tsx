@@ -63,7 +63,7 @@ export const SocialMidias: T.itens = [
   },
   {
     id: 'bt-toggleTheme-navSocialMidia',
-    icon: { icon: <ToggleTheme /> },
+    icon: { icon: <ToggleTheme id="bt" /> },
     style: styles,
     linkstyle: itemStyle
   }

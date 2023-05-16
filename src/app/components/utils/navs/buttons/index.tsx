@@ -16,7 +16,7 @@ const itemStyle: T.LinkStyle = {
 const navButtons: T.itens = [
   {
     id: 'nav-button-toggleTheme',
-    icon: { icon: <ToggleTheme /> },
+    icon: { icon: <ToggleTheme id="nav" /> },
     style: styles,
     linkstyle: itemStyle
   },
