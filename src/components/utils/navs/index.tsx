@@ -6,7 +6,16 @@ import { useOffCanvas } from '@/hooks/offCanvas';
 import * as S from './style';
 import type { navProps, item } from './types';
 
-const Item = ({ id, icon, path, target, title, style, linkstyle }: item) => {
+const Item = ({
+  id,
+  arialabel,
+  icon,
+  path,
+  target,
+  title,
+  style,
+  linkstyle
+}: item) => {
   const router = usePathname();
   router != path ? (linkstyle.selected = undefined) : '';
   return (
@@ -15,6 +24,7 @@ const Item = ({ id, icon, path, target, title, style, linkstyle }: item) => {
         <S.NavLink
           id={`a.${id}`}
           rel="nooponer"
+          aria-label={arialabel}
           href={path}
           target={target}
           color={
