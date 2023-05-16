@@ -10,7 +10,6 @@ type variant =
   | 'text';
 
 interface buttonStyle {
-  arialabel?: string;
   color?: keyof typeTheme.colors;
   bgcolor: keyof typeTheme.colors | 'transparent';
   height: keyof typeTheme.height;
@@ -21,6 +20,7 @@ interface buttonStyle {
 
 export interface buttonProps extends buttonStyle {
   id: string;
+  arialabel?: string;
   onClick: () => void;
   children: layoutTypes.children;
 }

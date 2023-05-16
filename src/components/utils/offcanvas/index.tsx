@@ -30,7 +30,7 @@ export const OffCanvas = ({
   };
   return (
     <>
-      <Button onClick={toggleShow} aria-aria-label="abrir menu" {...buttonopen}>
+      <Button onClick={toggleShow} aria-label="abrir menu" {...buttonopen}>
         {buttonopen.icon}
       </Button>
 
