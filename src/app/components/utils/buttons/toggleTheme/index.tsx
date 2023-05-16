@@ -6,12 +6,12 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { ThemeContext } from '@/contexts/theme';
 import { ButtonCircle } from '@/components/utils/buttons/circle';
 
-export const ToggleTheme = () => {
+export const ToggleTheme = (id: { id: string }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return theme.title === 'Light' ? (
     <ButtonCircle
-      id="button-toggle-theme-dark"
+      id={`button-toggle-theme-${id}-dark`}
       arialabel="alterar a página para o tema dark"
       bgcolor="transparent"
       color="dark"
@@ -29,7 +29,7 @@ export const ToggleTheme = () => {
     </ButtonCircle>
   ) : (
     <ButtonCircle
-      id="button-toggle-theme-light"
+      id={`button-toggle-theme-${id}-light`}
       arialabel="alterar a página para o tema light"
       bgcolor="transparent"
       color="light"
