@@ -1,7 +1,7 @@
 import * as typeTheme from '@/types/theme';
 import * as layoutTypes from '@/types/layouts';
 
-export type variant =
+type variant =
   | 'default'
   | 'outline'
   | 'circle'
@@ -9,24 +9,22 @@ export type variant =
   | 'switch'
   | 'text';
 
-export type buttonStyle = {
-  variant: variant;
+interface buttonStyle {
+  arialabel?: string;
   color?: keyof typeTheme.colors;
   bgcolor: keyof typeTheme.colors | 'transparent';
   height: keyof typeTheme.height;
   minWidth?: string;
   hover?: boolean;
   animation?: layoutTypes.animation;
-};
+}
 
-export type buttonProps = {
+export interface buttonProps extends buttonStyle {
   id: string;
-  color: keyof typeTheme.colors;
-  bgcolor: keyof typeTheme.colors | 'transparent';
-  height: keyof typeTheme.height;
-  minWidth?: string;
-  hover?: boolean;
   onClick: () => void;
   children: layoutTypes.children;
-  animation?: layoutTypes.animation;
-};
+}
+
+export interface buttonStyleProps extends buttonStyle {
+  variant: variant;
+}

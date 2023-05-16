@@ -2,7 +2,7 @@
 
 import styled, { css } from 'styled-components';
 import { transparentize } from 'polished';
-import { buttonStyle } from './types';
+import { buttonStyleProps } from './types';
 import * as f from '@/components/functions';
 
 function getBorderRadius(height: string) {
@@ -39,7 +39,7 @@ function getBorderRadius(height: string) {
     }
   }
 }
-export const Button = styled.button<buttonStyle>`
+export const Button = styled.button<buttonStyleProps>`
   cursor: pointer;
   font-size: ${({ theme, height }) => theme.typography.sizes[height]}rem;
   transition: ${({ theme }) => theme.transition};

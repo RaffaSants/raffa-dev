@@ -10,8 +10,9 @@ import { MainLayout } from './components/layout/main';
 import { FooterLayout } from './components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Site desenvolvido para mostrar o meu portfolio.',
+  title: 'Raffa-Dev | Portfolio',
+  description:
+    'Portfólio desenvolvedor web front-end, com conhecimento em Recat, Nextjs, Styled-components, Jest, entre outras tecnologias utilizadas no bom desenvolvimento de UIs.',
   authors: { name: 'Rafael da Conceição' },
   viewport: { width: 'device-width', initialScale: 1 }
 };
@@ -24,16 +25,16 @@ const poppins = Poppins({
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br" className={poppins.className}>
-      <FlexBody direction="column" minheight="100vh" position="relative">
-        <StyledComponentsRegistry>
+      <StyledComponentsRegistry>
+        <FlexBody direction="column" minheight="100vh" position="relative">
           <ThemeContextProvider>
             <GlobalStyle />
             <HeaderLayout />
             <MainLayout>{children}</MainLayout>
             <FooterLayout />
           </ThemeContextProvider>
-        </StyledComponentsRegistry>
-      </FlexBody>
+        </FlexBody>
+      </StyledComponentsRegistry>
     </html>
   );
 }

@@ -11,7 +11,8 @@ export const ToggleTheme = () => {
 
   return theme.title === 'Light' ? (
     <ButtonCircle
-      id="button-toggle-theme"
+      id="button-toggle-theme-dark"
+      arialabel="alterar a página para o tema dark"
       bgcolor="transparent"
       color="dark"
       height="m"
@@ -28,7 +29,8 @@ export const ToggleTheme = () => {
     </ButtonCircle>
   ) : (
     <ButtonCircle
-      id="button-toggle-theme"
+      id="button-toggle-theme-light"
+      arialabel="alterar a página para o tema light"
       bgcolor="transparent"
       color="light"
       height="m"
