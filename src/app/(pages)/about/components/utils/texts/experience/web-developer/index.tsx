@@ -10,7 +10,6 @@ export const ExperienceWebDeveloper = () => {
       aligny="center"
       gap="1rem"
       padding="1rem"
-      margin="1rem 0"
       position="relative"
       border="solid 1px #282C34"
       borderradius="0 5px 5px 0"
@@ -38,6 +37,9 @@ export const ExperienceWebDeveloper = () => {
         opacity: 0;
         display: none;`
       }}
+      breakpoints={[
+        { sizes: { maxWidth: '768px' }, comands: 'border-radius: 0 0 5px 5px;' }
+      ]}
     >
       <Text size="m" color="primary" align="justify" weight="300">
         Estou à procura de minha primeira experiência de trabalho como web

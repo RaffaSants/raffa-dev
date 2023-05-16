@@ -12,6 +12,7 @@ export const SectionAbout = () => {
       flexwrap="wrap"
       direction="row"
       padding="1rem"
+      margin="0 0 1.5rem 0"
       height="calc(100% - 7.5rem)"
       width="100%"
       gap="10px"

@@ -30,6 +30,7 @@ export type utilsProps = {
   borderradius?: string;
   index?: number;
   transform?: string;
+  breakpoints?: Array<layoutTypes.breakPoint>;
   children?: layoutTypes.children;
 };
 

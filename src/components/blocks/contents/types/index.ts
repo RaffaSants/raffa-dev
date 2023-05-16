@@ -39,6 +39,7 @@ export interface contentStylesProps {
   borderradius?: string;
   target?: layoutTypes.target;
   notarget?: layoutTypes.target;
+  breakpoints?: Array<layoutTypes.breakPoint>;
 }
 
 export interface ContentStyle extends contentStylesProps {

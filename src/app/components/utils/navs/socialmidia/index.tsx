@@ -19,7 +19,15 @@ export const SocialMidias: T.itens = [
     target: '_blank',
     icon: {
       icon: <FaLinkedinIn />,
-      hover: { comands: 'fill: #0a63bc;' }
+      hover: { comands: 'fill: #0a63bc;' },
+      breakpoints: [
+        {
+          sizes: { maxWidth: '768px' },
+          comands: `svg {
+          fill: #0a63bc;
+        }`
+        }
+      ]
     },
     path: 'https://www.linkedin.com/in/dev-raffaelc/',
     style: styles,
@@ -31,7 +39,10 @@ export const SocialMidias: T.itens = [
     target: '_blank',
     icon: {
       icon: <SiGithub />,
-      hover: { comands: 'fill: gray;' }
+      hover: { comands: 'fill: gray;' },
+      breakpoints: [
+        { sizes: { maxWidth: '768px' }, comands: 'svg{fill: gray;}' }
+      ]
     },
     path: 'https://github.com/RaffaSants',
     style: styles,
@@ -43,7 +54,13 @@ export const SocialMidias: T.itens = [
     target: '_blank',
     icon: {
       icon: <GrInsta />,
-      hover: { comands: 'fill: url(#rg-instagram)' }
+      hover: { comands: 'fill: url(#rg-instagram);' },
+      breakpoints: [
+        {
+          sizes: { maxWidth: '768px' },
+          comands: 'svg {fill: url(#rg-instagram);}'
+        }
+      ]
     },
     path: 'https://www.instagram.com/mnrafael/',
     style: styles,
@@ -55,7 +72,13 @@ export const SocialMidias: T.itens = [
     target: '_blank',
     icon: {
       icon: <SiYoutube />,
-      hover: { comands: 'fill: red;' }
+      hover: { comands: 'fill: red;' },
+      breakpoints: [
+        {
+          sizes: { maxWidth: '768px' },
+          comands: 'svg {fill: red;}'
+        }
+      ]
     },
     path: 'https://www.youtube.com/channel/UCfaV8rjEyCjK2kCB75jafFw',
     style: styles,
@@ -65,7 +88,8 @@ export const SocialMidias: T.itens = [
     id: 'bt-toggleTheme-navSocialMidia',
     icon: { icon: <ToggleTheme id="bt" /> },
     style: styles,
-    linkstyle: itemStyle
+    linkstyle: itemStyle,
+    breakpoints: [{ sizes: { maxWidth: '768px' }, comands: 'display: none;' }]
   }
 ];
 

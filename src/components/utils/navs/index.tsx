@@ -14,12 +14,18 @@ const Item = ({
   target,
   title,
   style,
-  linkstyle
+  linkstyle,
+  breakpoints
 }: item) => {
   const router = usePathname();
   router != path ? (linkstyle.selected = undefined) : '';
   return (
-    <S.NavIten id={id} isselect={router == path ? 'true' : 'false'} {...style}>
+    <S.NavIten
+      id={id}
+      isselect={router == path ? 'true' : 'false'}
+      breakpoints={breakpoints}
+      {...style}
+    >
       {path ? (
         <S.NavLink
           id={`a.${id}`}
@@ -35,16 +41,12 @@ const Item = ({
           selected={linkstyle.selected}
           {...linkstyle}
         >
-          {icon && (
-            <S.NavIcon animation={icon.animation} hover={icon.hover}>
-              {icon.icon}
-            </S.NavIcon>
-          )}
+          {icon && <S.NavIcon {...icon}>{icon.icon}</S.NavIcon>}
           {title}
         </S.NavLink>
       ) : (
         <>
-          {icon && <S.NavIcon>{icon.icon}</S.NavIcon>}
+          {icon && <S.NavIcon {...icon}>{icon.icon}</S.NavIcon>}
           {title}
         </>
       )}

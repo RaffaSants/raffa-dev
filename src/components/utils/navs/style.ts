@@ -1,54 +1,18 @@
 'use client';
 
 import Link from 'next/link';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import type * as T from './types';
 import * as f from '../../functions/index';
+import { getBreakPoints } from '@/components/functions/getBreakpoints';
 
-const itemanimation = (from: string, to: string) => {
-  return keyframes`
-    from{
-      ${from}
-    }
-    to{
-      ${to}
-    }`;
-};
-
-const getMedia = (medias: T.medias) => {
-  return medias.map(({ sizes, comands }) => {
-    if (sizes.maxWidth && sizes.minWidth) {
-      return css`
-        @media screen and (max-width: ${sizes.maxWidth}) and (min-width: ${sizes.minWidth}) {
-          ${comands}
-        }
-      `;
-    } else if (sizes.maxWidth) {
-      return css`
-        @media screen and (max-width: ${sizes.maxWidth}) {
-          ${comands}
-        }
-      `;
-    } else if (sizes.minWidth) {
-      return css`
-        @media screen and (min-width: ${sizes.minWidth}) {
-          ${comands}
-        }
-      `;
-    }
-  });
-};
 
 export const NavIcon = styled.div<T.IconStyle>`
   display: flex;
   width: fit-content;
   height: fit-content;
   ${({ hover }) => hover && f.getHover(hover)}
-`;
-
-export const IconToggle = styled.div`
-  width: fit-content;
-  height: fit-content;
+  ${({ breakpoints }) => (breakpoints && getBreakPoints(breakpoints))}
 `;
 
 export const NavLink = styled(Link)<T.LinkStyle>`
@@ -78,6 +42,7 @@ export const NavLink = styled(Link)<T.LinkStyle>`
         background-color: black;
       }
     `}
+  ${({ breakpoints }) => (breakpoints && getBreakPoints(breakpoints))}
 `;
 
 export const NavIten = styled.li<T.LiStyle>`
@@ -117,7 +82,7 @@ export const NavIten = styled.li<T.LiStyle>`
       : ''}
   ${({before})=>before && `&&::before{ ${before} }`}
   ${({after})=>after && `&&::after{ ${after} }`}
-
+  ${({ breakpoints }) => (breakpoints && getBreakPoints(breakpoints))}
 `;
 
 export const NavWrap = styled.ul<T.UlStyle>`
@@ -134,7 +99,7 @@ export const NavWrap = styled.ul<T.UlStyle>`
   ${({ theme, bgcolor }) =>
     bgcolor && `background-color: ${theme.colors[bgcolor]};`};
   ${({ align }) => (align && f.getAlignX(align))}
-  ${({ mediascreen }) => (mediascreen ? getMedia(mediascreen) : ``)}
+  ${({ breakpoints }) => (breakpoints && getBreakPoints(breakpoints))}
 `;
 
 export const Nav = styled.nav<T.navStyle>`
@@ -142,6 +107,7 @@ export const Nav = styled.nav<T.navStyle>`
   flex-direction: ${({ direction }) => direction};
   height: ${({ height }) => height};
   width: ${({ width }) => width};
+  max-width: ${({maxwidth})=> maxwidth};
   min-width: ${({ minwidth }) => minwidth};
   ${({ aligny }) => aligny && f.getAlignY(aligny)}
   ${({ alignx }) => alignx && f.getAlignX(alignx)}
@@ -151,5 +117,5 @@ export const Nav = styled.nav<T.navStyle>`
         ? `background-color:${theme.colors[bgcolor]};`
         : `background-color:${bgcolor};`
       : ''}
-  ${({ mediascreen }) => (mediascreen ? getMedia(mediascreen) : ``)}
+  ${({ breakpoints }) => (breakpoints && getBreakPoints(breakpoints))}
 `;

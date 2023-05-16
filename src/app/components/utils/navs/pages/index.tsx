@@ -69,5 +69,11 @@ export const navPages: T.navigation = {
   bgcolor: 'tertiary',
   height: 'fit-content',
   gap: '1.8rem',
-  itens: Pages
+  itens: Pages,
+  breakpoints: [
+    {
+      sizes: { maxWidth: '768px' },
+      comands: 'display: none'
+    }
+  ]
 };

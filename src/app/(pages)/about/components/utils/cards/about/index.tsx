@@ -20,7 +20,6 @@ export const CardAbout = () => {
       minheight="400px"
       keyid="card-about"
       position="relative"
-      flexwrap="wrap"
       width="100%"
       maxwidth="900px"
       minwidth="300px"
