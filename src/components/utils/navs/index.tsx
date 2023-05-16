@@ -14,6 +14,7 @@ const Item = ({ id, icon, path, target, title, style, linkstyle }: item) => {
       {path ? (
         <S.NavLink
           id={`a.${id}`}
+          rel="nooponer"
           href={path}
           target={target}
           color={

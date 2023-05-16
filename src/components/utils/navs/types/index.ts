@@ -30,6 +30,7 @@ type icon = {
 
 type itenConifig = {
   id: string;
+  arialabel?: string;
   title?: string;
   path?: string;
   target?: '_blank' | '_parent' | '_self' | '_top';

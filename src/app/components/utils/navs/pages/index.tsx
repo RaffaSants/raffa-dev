@@ -9,7 +9,7 @@ const styles: T.LiStyle = {
       background-color: #aa6938;
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -0.5rem;
       transition: .5s linear;`,
     comands: 'width: 100%;'
   }

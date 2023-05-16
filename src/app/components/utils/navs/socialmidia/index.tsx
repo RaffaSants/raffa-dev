@@ -15,6 +15,8 @@ const itemStyle: T.LinkStyle = {
 export const SocialMidias: T.itens = [
   {
     id: 'icon-socialMidia-Linkedin',
+    arialabel: 'visitar o meu perfil no linkedin',
+    target: '_blank',
     icon: {
       icon: <FaLinkedinIn />,
       hover: { comands: 'fill: #0a63bc;' }
@@ -25,6 +27,8 @@ export const SocialMidias: T.itens = [
   },
   {
     id: 'icon-socialMidia-gitHub',
+    arialabel: 'visitar o meu perfil no github',
+    target: '_blank',
     icon: {
       icon: <SiGithub />,
       hover: { comands: 'fill: gray;' }
@@ -35,6 +39,8 @@ export const SocialMidias: T.itens = [
   },
   {
     id: 'icon-socialMidia-instagram',
+    arialabel: 'visitar o meu perfil no instagram',
+    target: '_blank',
     icon: {
       icon: <GrInsta />,
       hover: { comands: 'fill: url(#rg-instagram)' }
@@ -45,6 +51,8 @@ export const SocialMidias: T.itens = [
   },
   {
     id: 'icon-socialMidia-youtube',
+    arialabel: 'visitar o meu canal no youtube',
+    target: '_blank',
     icon: {
       icon: <SiYoutube />,
       hover: { comands: 'fill: red;' }

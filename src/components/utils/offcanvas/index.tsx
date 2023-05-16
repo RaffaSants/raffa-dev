@@ -14,7 +14,12 @@ export const OffCanvas = ({
 }: offCanvas) => {
   const { show, toggleShow } = useOffCanvas();
   const ButtonX = (
-    <Button key={keyid} onClick={toggleShow} {...buttonopen}>
+    <Button
+      key={keyid}
+      aria-label="fechar menu"
+      onClick={toggleShow}
+      {...buttonopen}
+    >
       {card.buttonclose.icon}
     </Button>
   );
@@ -25,7 +30,7 @@ export const OffCanvas = ({
   };
   return (
     <>
-      <Button onClick={toggleShow} {...buttonopen}>
+      <Button onClick={toggleShow} aria-aria-label="abrir menu" {...buttonopen}>
         {buttonopen.icon}
       </Button>
 
