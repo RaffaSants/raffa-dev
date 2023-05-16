@@ -1,0 +1,38 @@
+import { ReactNode } from 'react';
+import { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
+import { FlexBody } from '@/components/blocks/containers/body/flex';
+import StyledComponentsRegistry from '@/styles/styled-components/registry';
+import { ThemeContextProvider } from '@/contexts/theme';
+import GlobalStyle from '@/styles/global';
+import { HeaderLayout } from './components/layout/header';
+import { MainLayout } from './components/layout/main';
+import { FooterLayout } from './components/layout/footer';
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+  description: 'Site desenvolvido para mostrar o meu portfolio.',
+  authors: { name: 'Rafael da Conceição' },
+  viewport: { width: 'device-width', initialScale: 1 }
+};
+
+const poppins = Poppins({
+  weight: '300'
+});
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="pt-br" className={poppins.className}>
+      <FlexBody direction="column" minheight="100vh" position="relative">
+        <StyledComponentsRegistry>
+          <ThemeContextProvider>
+            <GlobalStyle />
+            <HeaderLayout />
+            <MainLayout>{children}</MainLayout>
+            <FooterLayout />
+          </ThemeContextProvider>
+        </StyledComponentsRegistry>
+      </FlexBody>
+    </html>
+  );
+}
