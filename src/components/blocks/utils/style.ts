@@ -3,6 +3,7 @@
 import styled, { css } from 'styled-components';
 import { utilsStyle } from './types';
 import * as F from '@/components/functions';
+import { getBreakPoints } from '@/components/functions';
 
 //@ts-ignore
 export const BlocksUtils = styled('div').attrs<utilsStyle>(({ variant }) => ({
@@ -36,6 +37,7 @@ export const BlocksUtils = styled('div').attrs<utilsStyle>(({ variant }) => ({
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
       : ''}
+    ${({breakpoints})=> breakpoints && getBreakPoints(breakpoints)}
     ${({
     type,
     direction,

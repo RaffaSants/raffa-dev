@@ -38,6 +38,9 @@ export const ExperienceOnix = () => {
           delay: 'ease'
         }
       }}
+      breakpoints={[
+        { sizes: { maxWidth: '768px' }, comands: `border-radius: 0 0 5px 5px;` }
+      ]}
     >
       <Title level="4" color="primary" weight="300" align="center">
         Assistente Administrativo jan/2017 - set/2022

@@ -6,12 +6,12 @@ export const CardJs = () => {
     <Card
       keyid="card-javascript"
       bgcolor="primary"
-      height="120px"
-      width="120px"
+      height="12rem"
+      width="12rem"
       alignx="center"
       aligny="center"
       position="relative"
-      body={<IoLogoJavascript style={{ height: '100px', width: '100px' }} />}
+      body={<IoLogoJavascript style={{ height: '10rem', width: '10rem' }} />}
     ></Card>
   );
 };

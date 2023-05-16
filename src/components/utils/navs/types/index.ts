@@ -10,21 +10,13 @@ type subPages = {
   subPage?: Array<subPages>;
 };
 
-export type itensConfig = {
-  key: string;
-  size: keyof themeTypes.sizes;
-  color?: keyof themeTypes.colors;
-  bgcolor?: keyof themeTypes.colorsBase | string;
-  animation?: layoutTypes.animation;
-  children?: layoutTypes.children;
-};
-
 type icon = {
   icon?: {
     key?: string;
     icon?: layoutTypes.children;
     hover?: layoutTypes.hover;
     animation?: layoutTypes.animation;
+    breakpoints?: Array<layoutTypes.breakPoint>;
   };
 };
 
@@ -34,6 +26,7 @@ type itenConifig = {
   title?: string;
   path?: string;
   target?: '_blank' | '_parent' | '_self' | '_top';
+  breakpoints?: Array<layoutTypes.breakPoint>;
   subPages?: Array<subPages>;
 };
 export type item = itenConifig &
@@ -46,7 +39,7 @@ export type itens = Array<item>;
 export type IconStyle = {
   animation?: layoutTypes.animation;
   hover?: layoutTypes.hover;
-  mediascreen?: Array<layoutTypes.breakPoint>;
+  breakpoints?: Array<layoutTypes.breakPoint>;
   children: layoutTypes.children;
 };
 
@@ -61,6 +54,7 @@ export type LinkStyle = {
     after?: string;
   };
   align: layoutTypes.alignX;
+  breakpoints?: Array<layoutTypes.breakPoint>;
   animation?: layoutTypes.animation;
   hover?: layoutTypes.hover;
   onClick?: () => void;
@@ -88,6 +82,7 @@ export type LiStyle = {
   after?: string;
   hover?: layoutTypes.hover;
   animation?: layoutTypes.animation;
+  breakpoints?: Array<layoutTypes.breakPoint>;
   isselect?: 'true' | 'false';
 };
 
@@ -101,7 +96,7 @@ export type UlStyle = {
   align?: layoutTypes.alignX;
   border?: string;
   borderradius?: string;
-  mediascreen?: Array<layoutTypes.breakPoint>;
+  breakpoints?: Array<layoutTypes.breakPoint>;
   children?: layoutTypes.children;
 };
 
@@ -109,11 +104,12 @@ export type navStyle = {
   direction: layoutTypes.direction;
   height?: layoutTypes.height;
   width?: string;
+  maxwidth?: string;
   minwidth?: layoutTypes.width;
   alignx?: layoutTypes.alignX;
   aligny?: layoutTypes.alignY;
   bgcolor?: keyof themeTypes.colorsBase;
-  mediascreen?: Array<layoutTypes.breakPoint>;
+  breakpoints?: Array<layoutTypes.breakPoint>;
   children?: layoutTypes.children;
 };
 

@@ -11,7 +11,7 @@ const styles: T.LiStyle = {
   bgcolor: 'tertiary',
   alignx: 'left',
   borderbottom: 'solid 1px hsl(222, 14%, 10%)',
-  borderradius: '5px 0 0 5px'
+  borderradius: '5px 5px 0 0'
 };
 
 const linkStyle: T.LinkStyle = {
@@ -43,21 +43,40 @@ const navItens: T.itens = [
 const nav: T.navigation = {
   id: 'nav-experience',
   itens: navItens,
-  borderradius: '5px 0 0 5px',
-  height: '292.5px',
   width: '100%',
-  gap: '1.5rem'
+  breakpoints: [
+    {
+      sizes: { maxWidth: '768px' },
+      comands: `
+      height: fit-content;
+      width: 90%;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+    `
+    }
+  ]
 };
 
 export const NavExperience = () => {
   return (
     <Nav
       direction="column"
-      alignx="center"
       aligny="center"
       navgations={[nav]}
-      height="fit-content"
-      width="100%"
+      height="100%"
+      width="40%"
+      maxwidth="250px"
+      breakpoints={[
+        {
+          sizes: { maxWidth: '768px' },
+          comands: `
+          height: fit-content;
+          width: 100%;
+          max-width: initial;
+          `
+        }
+      ]}
     />
   );
 };

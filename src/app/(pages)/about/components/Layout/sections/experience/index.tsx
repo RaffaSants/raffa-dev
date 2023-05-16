@@ -7,10 +7,10 @@ export const SectionExperiences = () => {
     <Section
       position="relative"
       direction="column"
-      width="90%"
+      width="60%"
       minheight="400px"
-      gap="1rem"
       margin="0 0 1rem 0"
+      breakpoints={[{ sizes: { maxWidth: '768px' }, comands: `width:90%;` }]}
     >
       <ExperienceOnix />
       <ExperienceWebDeveloper />

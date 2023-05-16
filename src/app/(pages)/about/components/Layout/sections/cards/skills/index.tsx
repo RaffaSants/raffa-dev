@@ -19,9 +19,9 @@ export const SectionSkills = () => {
       alignx="center"
       aligny="center"
       height="calc(100% - 7.5rem)"
-      width="80%"
+      width="90%"
       gap="0 20px"
-      margin="auto"
+      margin="10px"
       bgcolor="primary"
       color="rgb(170, 105, 56)"
     >

@@ -1,9 +1,10 @@
 'use client';
 
 import styled, { css } from 'styled-components';
-import type { ContentStyle } from './types/types';
+import type { ContentStyle } from './types';
 import * as f from '../../functions/index';
 import { Opacity } from '@/components/animations';
+import { getBreakPoints } from '../../functions/index';
 
 //@ts-ignore
 export const Content = styled('div').attrs<ContentStyle>(({ variant }) => ({
@@ -42,4 +43,5 @@ export const Content = styled('div').attrs<ContentStyle>(({ variant }) => ({
     ${({target})=> target && f.getTarget(target)}
     ${({notarget})=> notarget && f.getNotTarget(notarget)}
     ${({animation})=> animation && css`animation: ${Opacity} 0.5s ease`}
+    ${({breakpoints})=> breakpoints && getBreakPoints(breakpoints)}
 `;

@@ -34,5 +34,6 @@ export const navOffCanvas: T.navigation = {
   bgcolor: 'tertiary',
   gap: '1rem',
   height: 'fit-content',
-  itens: navButtons
+  itens: navButtons,
+  breakpoints: [{ sizes: { minWidth: '769px' }, comands: 'display: none;' }]
 };
