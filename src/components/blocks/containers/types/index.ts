@@ -26,5 +26,5 @@ export interface containerStyle {
   color?: keyof themeTypes.colors | string;
   margin?: string;
   zindex?: number;
-  breakpoints: Array<layoutTypes.breakPoint>;
+  breakpoints?: Array<layoutTypes.breakPoint>;
 }
