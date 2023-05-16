@@ -11,7 +11,10 @@ const styles: T.LiStyle = {
   bgcolor: 'tertiary',
   alignx: 'left',
   borderbottom: 'solid 1px hsl(222, 14%, 10%)',
-  borderradius: '5px 5px 0 0'
+  borderradius: '5px 0px 0px 5px',
+  breakpoints: [
+    { sizes: { maxWidth: '768px' }, comands: 'border-radius: 5px 5px 0 0' }
+  ]
 };
 
 const linkStyle: T.LinkStyle = {
