@@ -3,10 +3,10 @@ import * as typeButtons from '../../buttons/types';
 import { animation } from '@/types/layouts';
 
 export type buttonCanvas = {
-  variant: typeButtons.variant;
-  color?: typeButtons.buttonStyle['color'];
-  bgcolor: typeButtons.buttonStyle['bgcolor'];
-  height: typeButtons.buttonStyle['height'];
+  variant: typeButtons.buttonStyleProps['variant'];
+  color?: typeButtons.buttonProps['color'];
+  bgcolor: typeButtons.buttonProps['bgcolor'];
+  height: typeButtons.buttonProps['height'];
   icon?: typeButtons.buttonProps['children'];
 };
 
