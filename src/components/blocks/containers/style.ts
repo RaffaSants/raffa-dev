@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import type { containerStyle } from './types';
 import * as F from '../../functions/index';
-import { getBreakPoints } from '@/components/functions/getBreakpoints';
+import { getBreakPoints } from '@/components/functions/getBreakPoints';
 
 //@ts-ignore
 export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({

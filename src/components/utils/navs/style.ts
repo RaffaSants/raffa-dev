@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styled, { css } from 'styled-components';
 import type * as T from './types';
 import * as f from '../../functions/index';
-import { getBreakPoints } from '@/components/functions/getBreakpoints';
+import { getBreakPoints } from '@/components/functions/getBreakPoints';
 
 
 export const NavIcon = styled.div<T.IconStyle>`
