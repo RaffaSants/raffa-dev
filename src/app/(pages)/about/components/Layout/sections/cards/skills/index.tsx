@@ -21,7 +21,7 @@ export const SectionSkills = () => {
       height="calc(100% - 7.5rem)"
       width="90%"
       gap="0 20px"
-      margin="10px"
+      margin="auto"
       bgcolor="primary"
       color="rgb(170, 105, 56)"
     >
