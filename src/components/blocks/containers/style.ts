@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import type { containerStyle } from './types';
 import * as F from '../../functions/index';
-import { getBreakPoints } from '@/components/functions/getBreakPoints';
+import { getBreakPoints } from '../../functions/getBreakPoints';
 
 //@ts-ignore
 export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({
@@ -19,25 +19,26 @@ export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({
   height: ${({ height }) => height};
   min-height: ${({ minheight }) => minheight};
   margin: ${({ margin }) => margin};
-  ${({ position }) => (position ? `position: ${position};` : '')}
-  ${({ top }) => (top ? `top: ${top};` : '')}
-  ${({ left }) => (left ? `left: ${left};` : '')}
-  ${({ right }) => (right ? `right: ${right};` : '')}
-  ${({ bottom }) => (bottom ? `bottom: ${bottom};` : '')}
-  ${({ alignx }) => (alignx ? F.getAlignX(alignx) : '')}
-  ${({ aligny }) => (aligny ? F.getAlignY(aligny) : '')}
+  ${({ position }) => (position && `position: ${position};`)}
+  ${({ top }) => (top && `top: ${top};`)}
+  ${({ left }) => (left && `left: ${left};`)}
+  ${({ right }) => (right && `right: ${right};`)}
+  ${({ bottom }) => (bottom && `bottom: ${bottom};`)}
+  ${({ alignx }) => (alignx && F.getAlignX(alignx))}
+  ${({ aligny }) => (aligny && F.getAlignY(aligny))}
+  ${({gap}) => gap && `gap: ${gap};`}
   ${({ bgcolor, theme }) =>
     bgcolor
-      ? theme.colors[bgcolor]
+      && theme.colors[bgcolor]
         ? `background-color:${theme.colors[bgcolor]};`
         : `background-color:${bgcolor};`
-      : ''}
+      }
   ${({ color, theme }) =>
     color
-      ? theme.typography.colors[color]
+      && theme.typography.colors[color]
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
-      : ''}
+      }
   ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
 
   ${({
@@ -60,9 +61,8 @@ export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({
       case 'grid': {
         return css`
           display: grid;
-          ${gap ? `gap: ${gap};` : ''}
-          ${columns ? F.getColumns(columns, columnsminmaxsize) : ''}
-          ${rows ? F.getRows(rows, rowsminmaxsize) : ''}
+          ${columns && F.getColumns(columns, columnsminmaxsize)}
+          ${rows && F.getRows(rows, rowsminmaxsize)}
         `;
       }
     }
