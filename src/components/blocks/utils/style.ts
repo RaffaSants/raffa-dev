@@ -17,10 +17,10 @@ export const BlocksUtils = styled('div').attrs<utilsStyle>(({ variant }) => ({
   padding: ${({ padding }) => padding};
   margin: ${({ margin }) => margin};
   height: ${({ height }) => height};
-  max-height:${({ maxheight }) => maxheight};
+  max-height: ${({ maxheight }) => maxheight};
   min-height: ${({ minheight }) => minheight};
   width: ${({ width }) => width};
-  max-width:${({ maxwidth }) => maxwidth};;
+  max-width: ${({ maxwidth }) => maxwidth};
   min-width: ${({ minwidth }) => minwidth};
   border-radius: ${({ borderradius }) => borderradius};
   ${({ index }) => (index ? `z-index: ${index}` : '')}
@@ -37,7 +37,7 @@ export const BlocksUtils = styled('div').attrs<utilsStyle>(({ variant }) => ({
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
       : ''}
-    ${({breakpoints})=> breakpoints && getBreakPoints(breakpoints)}
+    ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
     ${({
     type,
     direction,

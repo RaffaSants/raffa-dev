@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import styled, { css } from 'styled-components';
 import type { containerStyle } from './types';
@@ -38,7 +38,7 @@ export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
       : ''}
-  ${({breakpoints})=> breakpoints && getBreakPoints(breakpoints)}
+  ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
 
   ${({
     type,

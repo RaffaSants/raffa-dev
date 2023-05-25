@@ -6,10 +6,10 @@ import { typogaphyStyles } from './types';
 
 //@ts-ignore
 export const Title = styled('h1').attrs<typogaphyStyles>(({ level }) => ({
-  as:`h${level}`
+  as: `h${level}`
 }))<typogaphyStyles>`
   font-weight: ${({ weight }) => weight};
-  text-align: ${({align}) => align};
+  text-align: ${({ align }) => align};
   ${({ color, theme }) =>
     color
       ? theme.typography.colors[color]
@@ -52,7 +52,7 @@ export const Text = styled.p<typogaphyStyles>`
   ${({ size, theme }) =>
     size && `font-size:${theme.typography.sizes[size]}rem;`}
   font-weight: ${({ weight }) => weight};
-  text-align: ${({align}) => align};
+  text-align: ${({ align }) => align};
   ${({ color, theme }) =>
     color
       ? theme.typography.colors[color]
