@@ -3,7 +3,6 @@
 import styled, { css } from 'styled-components';
 import type { containerStyle } from './types';
 import * as F from '../../functions/index';
-import { getBreakPoints } from '../../functions/getBreakPoints';
 
 //@ts-ignore
 export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({
@@ -39,7 +38,7 @@ export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
       }
-  ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
+  ${({ breakpoints }) => breakpoints && F.getBreakPoints(breakpoints)}
 
   ${({
     type,

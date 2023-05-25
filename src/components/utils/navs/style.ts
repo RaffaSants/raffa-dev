@@ -4,14 +4,14 @@ import Link from 'next/link';
 import styled, { css } from 'styled-components';
 import type * as T from './types';
 import * as f from '../../functions/index';
-import { getBreakPoints } from '../../functions/getBreakPoints';
+
 
 export const NavIcon = styled.div<T.IconStyle>`
   display: flex;
   width: fit-content;
   height: fit-content;
   ${({ hover }) => hover && f.getHover(hover)}
-  ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
+  ${({ breakpoints }) => breakpoints && f.getBreakPoints(breakpoints)}
 `;
 
 export const NavLink = styled(Link)<T.LinkStyle>`
@@ -50,7 +50,7 @@ export const NavLink = styled(Link)<T.LinkStyle>`
         background-color: black;
       }
     `}
-  ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
+  ${({ breakpoints }) => breakpoints && f.getBreakPoints(breakpoints)}
 `;
 
 export const NavIten = styled.li<T.LiStyle>`
@@ -92,7 +92,7 @@ export const NavIten = styled.li<T.LiStyle>`
       : ''}
   ${({ before }) => before && `&&::before{ ${before} }`}
   ${({ after }) => after && `&&::after{ ${after} }`}
-  ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
+  ${({ breakpoints }) => breakpoints && f.getBreakPoints(breakpoints)}
 `;
 
 export const NavWrap = styled.ul<T.UlStyle>`
@@ -109,7 +109,7 @@ export const NavWrap = styled.ul<T.UlStyle>`
   ${({ theme, bgcolor }) =>
     bgcolor && `background-color: ${theme.colors[bgcolor]};`};
   ${({ align }) => align && f.getAlignX(align)}
-  ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
+  ${({ breakpoints }) => breakpoints && f.getBreakPoints(breakpoints)}
 `;
 
 export const Nav = styled.nav<T.navStyle>`
@@ -127,5 +127,5 @@ export const Nav = styled.nav<T.navStyle>`
         ? `background-color:${theme.colors[bgcolor]};`
         : `background-color:${bgcolor};`
       : ''}
-  ${({ breakpoints }) => breakpoints && getBreakPoints(breakpoints)}
+  ${({ breakpoints }) => breakpoints && f.getBreakPoints(breakpoints)}
 `;
