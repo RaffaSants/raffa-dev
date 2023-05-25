@@ -44,7 +44,7 @@ export const SocialMidias: T.itens = [
         { sizes: { maxWidth: '768px' }, comands: 'svg{fill: gray;}' }
       ]
     },
-    path: 'https://github.com/RaffaSants',
+    path: 'https://github.com/dev-Raffa',
     style: styles,
     linkstyle: itemStyle
   },
@@ -62,7 +62,7 @@ export const SocialMidias: T.itens = [
         }
       ]
     },
-    path: 'https://www.instagram.com/mnrafael/',
+    path: 'https://www.instagram.com/dev.raffa/',
     style: styles,
     linkstyle: itemStyle
   },
@@ -86,7 +86,7 @@ export const SocialMidias: T.itens = [
   },
   {
     id: 'bt-toggleTheme-navSocialMidia',
-    icon: { icon: <ToggleTheme id="bt" /> },
+    icon: { icon: <ToggleTheme id="bt-toggleTheme" /> },
     style: styles,
     linkstyle: itemStyle,
     breakpoints: [{ sizes: { maxWidth: '768px' }, comands: 'display: none;' }]
