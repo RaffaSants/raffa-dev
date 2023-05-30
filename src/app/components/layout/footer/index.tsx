@@ -10,7 +10,7 @@ export const Footer = () => {
       width="100%"
       bgcolor="#212121ab"
     >
-      <Text size="s" color="secondary">
+      <Text size="s" color="primary">
         Copyright © 2023
       </Text>
     </FlexFooter>
