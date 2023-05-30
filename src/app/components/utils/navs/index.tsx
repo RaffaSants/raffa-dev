@@ -10,7 +10,6 @@ export const NavPage = () => {
       direction="row"
       alignx="between"
       aligny="center"
-      bgcolor="tertiary"
       height="fit-content"
       minwidth="100%"
       navgations={[navPages, navSocialMidias, navOffCanvas]}

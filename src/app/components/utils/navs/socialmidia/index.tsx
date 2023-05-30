@@ -96,7 +96,6 @@ export const SocialMidias: T.itens = [
 export const navSocialMidias: T.navigation = {
   id: 'navSocialMidias',
   align: 'center',
-  bgcolor: 'tertiary',
   height: 'fit-content',
   gap: '1.8rem',
   itens: SocialMidias

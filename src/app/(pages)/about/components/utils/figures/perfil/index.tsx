@@ -1,6 +1,6 @@
 import { Figure } from '@/components/medias/figures';
 import { imgFigureProps } from '@/components/medias/figures/types';
-import perfilPicture from '../../../../../../../../public/image/perfil.jpeg';
+import perfilPicture from '../../../../../../../../public/image/me_2.jpg';
 import { Text } from '@/components/typography/texts';
 
 const image: imgFigureProps = {

@@ -7,9 +7,9 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
       columns="auto-fill"
       gap="1rem"
       columnsminmaxsize="repeat(auto-fit, minmax(320px, 1fr))"
-      minheight="80vh"
+      minheight="calc(100vh - 17rem)"
       padding="0 5%"
-      margin="25px 0"
+      margin="2.5rem 0"
     >
       {children}
     </GridMain>

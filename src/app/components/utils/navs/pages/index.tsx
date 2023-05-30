@@ -66,7 +66,6 @@ export const Pages: T.itens = [
 export const navPages: T.navigation = {
   id: 'navpages',
   align: 'center',
-  bgcolor: 'tertiary',
   height: 'fit-content',
   gap: '1.8rem',
   itens: Pages,

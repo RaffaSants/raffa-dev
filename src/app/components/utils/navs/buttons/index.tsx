@@ -31,7 +31,6 @@ const navButtons: T.itens = [
 export const navOffCanvas: T.navigation = {
   id: 'navOffCanvas',
   align: 'center',
-  bgcolor: 'tertiary',
   gap: '1rem',
   height: 'fit-content',
   itens: navButtons,

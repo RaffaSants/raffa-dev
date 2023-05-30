@@ -1,8 +1,10 @@
 import { Section } from '@/components/blocks/contents/section';
-import { CardAbout } from './components/utils/cards/about';
-import { CardEducation } from './components/utils/cards/education';
-import { CardExperience } from './components/utils/cards/experiences';
-import { CardSkills } from './components/utils/cards/skills';
+import {
+  CardAbout,
+  CardEducation,
+  CardExperience,
+  CardSkills
+} from './components/utils/cards/export';
 //import { SectionCards } from './components/Layout/sections/cards';
 //import { SideNav } from './components/Layout/sections/navs';
 

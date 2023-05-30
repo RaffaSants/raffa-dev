@@ -8,14 +8,14 @@ const img: imgFigureProps = {
   src: image,
   priority: true,
   fill: true,
-  quality: 80,
-  sizes: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
+  quality: 70,
+  sizes: '(max-width: 768px) 100vw, (min-width: 1200px) 50vw'
 };
 
 export const SectionImage = () => {
   return (
     <Section
-      height="100%"
+      height="95%"
       minheight="250px"
       direction="column"
       alignx="center"
