@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { GridMain } from '@/components/blocks/containers/main/grid';
 
-export const MainLayout = ({ children }: { children: ReactNode }) => {
+export const Main = ({ children }: { children: ReactNode }) => {
   return (
     <GridMain
       columns="auto-fill"

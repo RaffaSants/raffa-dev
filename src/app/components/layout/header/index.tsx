@@ -2,7 +2,7 @@ import { FlexHeader } from '@/components/blocks/containers/header/flex';
 import { NavPage } from '../../utils/navs';
 import { OffCanvasProvider } from '@/contexts/offcanvas';
 
-export const HeaderLayout = () => {
+export const Header = () => {
   return (
     <OffCanvasProvider>
       <FlexHeader

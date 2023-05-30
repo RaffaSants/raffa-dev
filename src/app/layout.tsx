@@ -1,13 +1,12 @@
 import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import { FlexBody } from '@/components/blocks/containers/body/flex';
 import StyledComponentsRegistry from '@/styles/styled-components/registry';
 import { ThemeContextProvider } from '@/contexts/theme';
 import GlobalStyle from '@/styles/global';
-import { HeaderLayout } from './components/layout/header';
-import { MainLayout } from './components/layout/main';
-import { FooterLayout } from './components/layout/footer';
+import { Header, Main, Footer } from './components/layout/exports';
 
 export const metadata: Metadata = {
   title: 'Raffa-Dev | Portfolio',
@@ -29,9 +28,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <FlexBody direction="column" minheight="100vh" position="relative">
           <ThemeContextProvider>
             <GlobalStyle />
-            <HeaderLayout />
-            <MainLayout>{children}</MainLayout>
-            <FooterLayout />
+            <Header />
+            <Main>
+              {children}
+              <Analytics />
+            </Main>
+            <Footer />
           </ThemeContextProvider>
         </FlexBody>
       </StyledComponentsRegistry>
