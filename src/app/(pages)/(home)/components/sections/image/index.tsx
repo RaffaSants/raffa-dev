@@ -9,7 +9,7 @@ const img: imgFigureProps = {
   priority: true,
   fill: true,
   quality: 70,
-  sizes: '(max-width: 768px) 100vw, (min-width: 1200px) 50vw'
+  sizes: '(max-width: 768px) 100vw, (min-width: 769px) 50vw'
 };
 
 export const SectionImage = () => {
