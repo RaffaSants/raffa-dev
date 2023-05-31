@@ -3,7 +3,7 @@ import { theme } from '@/types/theme';
 const lightTheme: theme = {
   title: 'Light',
   colors: {
-    primary: '#910808',
+    primary: 'rgb(255 255 255)',
     secondary: '#ae0404',
     tertiary: '#f4f4f4'
   },

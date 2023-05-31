@@ -24,7 +24,7 @@ export const CardAbout = () => {
       maxwidth="900px"
       minwidth="300px"
       padding="0 0 2rem 0"
-      shadow="3px 2px 3px navajowhite"
+      shadow="3px 2px 3px #101010"
       borderradius="5px"
       header={header}
       body={<SectionAbout />}

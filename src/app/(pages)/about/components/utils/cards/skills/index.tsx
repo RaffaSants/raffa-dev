@@ -23,7 +23,7 @@ export const CardSkills = () => {
       width="100%"
       maxwidth="900px"
       minwidth="300px"
-      shadow="3px 2px 3px navajowhite"
+      shadow="3px 2px 3px #101010"
       borderradius="5px"
       header={header}
       body={<SectionSkills />}

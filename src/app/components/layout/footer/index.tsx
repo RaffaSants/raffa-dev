@@ -8,7 +8,7 @@ export const Footer = () => {
       alignx="center"
       aligny="center"
       width="100%"
-      bgcolor="#212121ab"
+      bgcolor="tertiary"
     >
       <Text size="s" color="primary">
         Copyright © 2023

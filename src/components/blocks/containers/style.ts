@@ -18,6 +18,7 @@ export const Container = styled('div').attrs<containerStyle>(({ variant }) => ({
   height: ${({ height }) => height};
   min-height: ${({ minheight }) => minheight};
   margin: ${({ margin }) => margin};
+  transition: ${({ theme }) => theme.transitions};
   ${({ position }) => (position && `position: ${position};`)}
   ${({ top }) => (top && `top: ${top};`)}
   ${({ left }) => (left && `left: ${left};`)}
