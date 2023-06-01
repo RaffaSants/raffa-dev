@@ -10,7 +10,7 @@ import {
 
 export default function Page() {
   return (
-    <Section direction="column" aligny="center" gap="15rem" padding="5rem 2rem">
+    <Section direction="column" aligny="center" gap="30vh" padding="5rem 2rem">
       <CardAbout />
       <CardEducation />
       <CardExperience />

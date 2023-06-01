@@ -6,7 +6,7 @@ export type height = 'fix-content' | string;
 
 export type width = 'fix-content' | string;
 
-export type direction = 'row' | 'column';
+export type direction = 'row' | 'column' | 'row-reverse' | 'column-reverse';
 
 export type alignX = 'left' | 'center' | 'right' | 'around' | 'between';
 

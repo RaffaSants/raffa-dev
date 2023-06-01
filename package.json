@@ -12,7 +12,8 @@
     "test:watch": "yarn test --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git commit -m"
   },
   "lint-staged": {
     "src/**/*": [
