@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
 import { typogaphyStyles } from './types';
+import { getBreakPoints } from '../functions';
 
 //@ts-ignore
 export const Title = styled('h1').attrs<typogaphyStyles>(({ level }) => ({
@@ -10,6 +11,7 @@ export const Title = styled('h1').attrs<typogaphyStyles>(({ level }) => ({
 }))<typogaphyStyles>`
   font-weight: ${({ weight }) => weight};
   text-align: ${({ align }) => align};
+  line-height: ${({lineheight})=>lineheight};
   ${({ color, theme }) =>
     color
       ? theme.typography.colors[color]
@@ -46,6 +48,8 @@ export const Title = styled('h1').attrs<typogaphyStyles>(({ level }) => ({
       }
     }
   }}
+
+  ${({breakpoints})=> breakpoints && getBreakPoints(breakpoints)}
 `;
 
 export const Text = styled.p<typogaphyStyles>`
@@ -59,6 +63,7 @@ export const Text = styled.p<typogaphyStyles>`
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
       : ''};
+  ${({breakpoints})=> breakpoints && getBreakPoints(breakpoints)}
 `;
 
 export const TextLink = styled(Link)<typogaphyStyles>`
@@ -74,4 +79,5 @@ export const TextLink = styled(Link)<typogaphyStyles>`
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
       : ''};
+  ${({breakpoints})=> breakpoints && getBreakPoints(breakpoints)}
 `;

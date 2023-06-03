@@ -6,7 +6,7 @@ export const Main = ({ children }: { children: ReactNode }) => {
     <GridMain
       columns="auto-fill"
       gap="1rem"
-      columnsminmaxsize="repeat(auto-fit, minmax(320px, 1fr))"
+      columnsminmaxsize="repeat(auto-fit, minmax(288px, 1fr))"
       minheight="calc(100vh - 17rem)"
       padding="0 5%"
       margin="2.5rem 0"

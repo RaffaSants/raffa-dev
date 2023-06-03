@@ -8,7 +8,7 @@ import type * as typeOffCanvas from '@/components/utils/offcanvas/types';
 
 const buttonOpen: typeOffCanvas.buttonCanvas = {
   variant: 'circle',
-  height: 'm',
+  height: 'l',
   icon: <RiMenu5Line fill="currentColor" />,
   color: 'dark',
   bgcolor: 'transparent'
@@ -16,7 +16,7 @@ const buttonOpen: typeOffCanvas.buttonCanvas = {
 
 const buttonclose: typeOffCanvas.buttonCanvas = {
   variant: 'circle',
-  height: 'm',
+  height: 'l',
   icon: <RiCloseLine fill="currentColor" />,
   color: 'dark',
   bgcolor: 'transparent'

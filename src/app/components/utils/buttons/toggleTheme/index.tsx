@@ -15,7 +15,7 @@ export const ToggleTheme = (id: { id: string }) => {
       arialabel="alterar a página para o tema dark"
       bgcolor="transparent"
       color="dark"
-      height="m"
+      height="l"
       onClick={toggleTheme}
       animation={{
         from: 'transform: rotate(0deg);',
@@ -33,7 +33,7 @@ export const ToggleTheme = (id: { id: string }) => {
       arialabel="alterar a página para o tema light"
       bgcolor="transparent"
       color="light"
-      height="m"
+      height="l"
       onClick={toggleTheme}
       animation={{
         from: 'transform: rotate(0deg);',

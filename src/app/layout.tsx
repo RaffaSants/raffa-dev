@@ -11,7 +11,7 @@ import { Header, Main, Footer } from './components/layout/exports';
 export const metadata: Metadata = {
   title: 'Raffa-Dev | Portfolio',
   description:
-    'Portfólio desenvolvedor web front-end, com conhecimento em Recat, Nextjs, Styled-components, Jest, entre outras tecnologias utilizadas no bom desenvolvimento de UIs.',
+    'Desenvolvedor web front-end, com conhecimento em React, Nextjs, Styled-components, Jest, entre outras tecnologias utilizadas no bom desenvolvimento de aplicações web modernas.',
   authors: { name: 'Rafael da Conceição' },
   viewport: { width: 'device-width', initialScale: 1 }
 };

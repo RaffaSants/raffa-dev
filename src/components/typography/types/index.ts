@@ -1,4 +1,4 @@
-import { children } from '@/types/layouts';
+import { children, breakPoint } from '@/types/layouts';
 import { colors } from '@/types/theme';
 
 export interface titleProps {
@@ -8,6 +8,7 @@ export interface titleProps {
   color: keyof colors | string;
   align?: 'center' | 'left' | 'right' | 'justify';
   children: children;
+  breakpoints?: Array<breakPoint>;
 }
 
 export interface textProps {
@@ -17,6 +18,7 @@ export interface textProps {
   color: keyof colors | string;
   align?: 'center' | 'left' | 'right' | 'justify';
   children: children;
+  breakpoints?: Array<breakPoint>;
 }
 
 export interface textLinkProps extends textProps {
@@ -30,4 +32,5 @@ export interface typogaphyStyles {
   weight?: string;
   color: keyof colors | string;
   align?: 'center' | 'left' | 'right' | 'justify';
+  breakpoints?: Array<breakPoint>;
 }

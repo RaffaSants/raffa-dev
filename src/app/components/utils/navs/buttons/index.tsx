@@ -8,7 +8,7 @@ const styles: T.LiStyle = {
 };
 
 const itemStyle: T.LinkStyle = {
-  fontSize: 'l',
+  fontSize: 'xl',
   align: 'center',
   color: 'primary'
 };

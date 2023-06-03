@@ -7,7 +7,7 @@ import type * as T from '@/components/utils/navs/types';
 const styles: T.LiStyle = {};
 
 const itemStyle: T.LinkStyle = {
-  fontSize: 'l',
+  fontSize: 'xl',
   color: 'primary',
   align: 'center'
 };

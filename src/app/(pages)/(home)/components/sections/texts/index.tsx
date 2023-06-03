@@ -9,10 +9,29 @@ export const SectionText = () => {
       direction="column"
       alignx="center"
       aligny="top"
-      width="100%"
+      gap="1rem"
+      width="50%"
+      breakpoints={[
+        {
+          sizes: { maxWidth: '768px' },
+          comands: `
+            width: 80%;
+            height: fit-content;
+            align-items: center;
+            margin: 0 10%;`
+        }
+      ]}
     >
-      <Title level="1" weight="300" color="#aa6938">
-        <b>Front-end Developer</b>
+      <Title
+        level="1"
+        weight="300"
+        color="#aa6938"
+        lineheight="95%"
+        breakpoints={[
+          { sizes: { maxWidth: '768px' }, comands: 'text-align: center;' }
+        ]}
+      >
+        Front-end Developer
       </Title>
       <Text size="m" color="primary" align="justify">
         <b>Olá! Me chamo Rafael</b> sou estudante de Eng. de Software e
