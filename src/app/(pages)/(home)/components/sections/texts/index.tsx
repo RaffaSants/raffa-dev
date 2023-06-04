@@ -18,7 +18,7 @@ export const SectionText = () => {
             width: 80%;
             height: fit-content;
             align-items: center;
-            margin: 0 10%;`
+            margin:0 10%;`
         }
       ]}
     >

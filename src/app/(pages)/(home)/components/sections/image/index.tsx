@@ -9,7 +9,7 @@ const img: imgFigureProps = {
   priority: true,
   fill: true,
   quality: 90,
-  sizes: '(max-width: 768px) 100vw, (min-width: 769px) 50vw',
+  sizes: '(max-width: 768px) 80vw, (min-width: 769px) 40vw',
   fit: 'contain'
 };
 
@@ -26,7 +26,7 @@ export const SectionImage = () => {
       breakpoints={[
         {
           sizes: { maxWidth: '768px' },
-          comands: 'width: 80%; max-height: 250px;'
+          comands: 'width: 100%; max-height: 340px;'
         }
       ]}
     >
