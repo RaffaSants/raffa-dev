@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'Desenvolvedor web front-end, com conhecimento em React, Nextjs, Styled-components, Jest, entre outras tecnologias utilizadas no bom desenvolvimento de aplicações web modernas.',
   authors: { name: 'Rafael da Conceição' },
   viewport: { width: 'device-width', initialScale: 1 },
-  verification: {google: 'cCEDzs4cgWkqPsc0WPKXQyDxxnCaGxqZbF6XpjWzX64'}
+  verification: { google: 'cCEDzs4cgWkqPsc0WPKXQyDxxnCaGxqZbF6XpjWzX64' }
 };
 
 const poppins = Poppins({
