@@ -1,7 +1,6 @@
 import { SiGithub, SiYoutube } from 'react-icons/si';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { GrInsta } from '../../icons/iconInsta';
-import { ToggleTheme } from '@/app/components/utils/buttons/toggleTheme';
 import type * as T from '@/components/utils/navs/types';
 
 const styles: T.LiStyle = {};
@@ -83,13 +82,6 @@ export const SocialMidias: T.itens = [
     path: 'https://www.youtube.com/channel/UCfaV8rjEyCjK2kCB75jafFw',
     style: styles,
     linkstyle: itemStyle
-  },
-  {
-    id: 'bt-toggleTheme-navSocialMidia',
-    icon: { icon: <ToggleTheme id="bt-toggleTheme" /> },
-    style: styles,
-    linkstyle: itemStyle,
-    breakpoints: [{ sizes: { maxWidth: '768px' }, comands: 'display: none;' }]
   }
 ];
 
