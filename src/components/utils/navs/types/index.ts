@@ -31,8 +31,8 @@ type itenConifig = {
 };
 export type item = itenConifig &
   icon & {
-    style: LiStyle;
-    linkstyle: LinkStyle;
+    style?: LiStyle;
+    linkstyle?: LinkStyle;
   };
 export type itens = Array<item>;
 
