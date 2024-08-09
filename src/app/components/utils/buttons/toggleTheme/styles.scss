@@ -1,0 +1,47 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "../../../../../styles/mixins/inline-animation.mixin.scss";
+
+input[name="toggleToDarkTheme"]{
+    appearance: none;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    
+
+    @include inline-animation(2s, infinite, alternate){
+        from{
+            transform: rotate(0deg);
+        }to {
+            transform: rotate(15deg);
+        }
+    }
+
+    &::before{
+        content: "\f495";
+        font-family: "bootstrap-icons";
+        font-size: 2.8rem;
+        transition: content 350ms ease;
+        color: var(--font-color-primary);
+    }
+
+    &:checked{
+        @include inline-animation(25s, infinite, none){
+            from{  
+                transform: rotate(0deg);
+            }to {
+                transform: rotate(360deg);
+            }
+        }
+
+        &::before{
+            content: "\f5a1";
+            
+        }
+    }
+
+
+}
+
+@keyframes rotate {
+    
+}

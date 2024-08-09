@@ -1,0 +1,9 @@
+@mixin inline-animation($duration, $repeat, $direction){
+    $name: inline-#{unique-id()};
+
+    @keyframes #{$name} {
+        @content
+    }
+
+    animation: $name $duration $direction $repeat;
+}

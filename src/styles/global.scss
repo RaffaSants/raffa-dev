@@ -1,0 +1,58 @@
+@use "sass:map";
+@import "./themes/dark.scss";
+@import "./themes/light.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+body {
+    --color-primary: #{map-get($lightThemeColors , "primary" )};
+    --color-secondary: #{map-get($lightThemeColors ,"secondary")};
+    --color-tertiary:#{map-get($lightThemeColors ,"tertiary")};
+    --font-color-primary: #{map-get($lightThemeColors, "font-primary")};
+    --font-color-secondary: #{map-get($lightThemeColors, "font-secondary")};
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secondary);
+    transition: all 3.5ms ease;
+    min-height: 100vh;
+    position: relative;
+
+    
+    &:has(input[name="toggleToDarkTheme"]:checked){
+        --color-primary: #{map-get($darkThemeColors , "primary" )};
+        --color-secondary: #{map-get($darkThemeColors ,"secondary")};
+        --color-tertiary:#{map-get($darkThemeColors ,"tertiary")};
+        --font-color-primary: #{map-get($darkThemeColors, "font-primary")};
+        --font-color-secondary: #{map-get($darkThemeColors, "font-secondary")};
+    }
+
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: var(--color-secondary);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary);
+        border-radius: 20px;
+        border:  var(--color-secondary);
+    }
+}
+
+  @media screen and (max-width: 768px) {
+    html{
+      font-size:50%;
+    }
+  }
+
+
