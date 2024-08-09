@@ -31,8 +31,8 @@ type itenConifig = {
 };
 export type item = itenConifig &
   icon & {
-    style?: LiStyle;
-    linkstyle?: LinkStyle;
+    style: LiStyle;
+    linkstyle: LinkStyle;
   };
 export type itens = Array<item>;
 
@@ -44,7 +44,7 @@ export type IconStyle = {
 };
 
 export type LinkStyle = {
-  fontSize: keyof themeTypes.sizes;
+  fontSize?: keyof themeTypes.sizes;
   color?: keyof themeTypes.colors | string;
   height?: string;
   width?: string;

@@ -1,6 +1,5 @@
 import type * as T from '@/components/utils/navs/types';
 import { OffCanvasNav } from '../../offcanvas';
-import { ToggleToDarkTheme } from '../../buttons/toggleTheme/component';
 
 const styles: T.LiStyle = {
   alignx: 'center',
@@ -14,10 +13,6 @@ const itemStyle: T.LinkStyle = {
 };
 
 const navButtons: T.itens = [
-  {
-    id: 'nav-button-toggleTheme',
-    icon: { icon: <ToggleToDarkTheme /> }
-  },
   {
     id: 'nav-button-offCanvas',
     icon: { icon: <OffCanvasNav /> },
