@@ -1,11 +1,11 @@
+import '../styles/global.scss';
+
 import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import { FlexBody } from '@/components/blocks/containers/body/flex';
 import StyledComponentsRegistry from '@/styles/styled-components/registry';
 import { ThemeContextProvider } from '@/contexts/theme';
-import GlobalStyle from '@/styles/global';
 import { Header, Main, Footer } from './components/layout/exports';
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const poppins = Poppins({
-  weight: '300',
+  weight: ['300', '700'],
   subsets: ['latin']
 });
 
@@ -26,9 +26,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br" className={poppins.className}>
       <StyledComponentsRegistry>
-        <FlexBody direction="column" minheight="100vh" position="relative">
+        <body>
           <ThemeContextProvider>
-            <GlobalStyle />
             <Header />
             <Main>
               {children}
@@ -36,7 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </Main>
             <Footer />
           </ThemeContextProvider>
-        </FlexBody>
+        </body>
       </StyledComponentsRegistry>
     </html>
   );

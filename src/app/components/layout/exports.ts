@@ -1,4 +1,4 @@
-import { Header } from './header';
+import { Header } from './header/component';
 import { Main } from './main';
 import { Footer } from './footer';
 
