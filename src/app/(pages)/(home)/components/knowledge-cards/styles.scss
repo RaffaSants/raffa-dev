@@ -1,0 +1,40 @@
+.knowledge-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    height: 43rem;
+
+    li{
+        a{
+            article{
+                display: flex;
+                justify-content: left;
+                gap: 0.8rem;
+                padding: 1.2rem 0.8rem;
+                align-items: center;
+                min-width: 18rem;
+                height: 8rem;
+                color:var(--font-color-primary);
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px 1px var(--shaddow-color-primary);
+
+                figure {
+                    svg{
+                        height: 4rem;
+                        width: 4rem;
+                    }
+                }
+                p {
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                }
+
+                &:hover{
+                    color: var(--font-color-secondary);
+                    box-shadow: 0px 0px 5px 1px var(--shaddow-color-secondary);
+                }
+            }
+        }
+    }
+}

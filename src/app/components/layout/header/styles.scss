@@ -2,12 +2,11 @@ header{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    padding: 0 5%;
+    padding: 0 8%;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
     top: 0;
-    height: 7.5rem;
+    height: 6rem;
     width: 100%;
     background-color:var(--color-tertiary);
     color: var(--font-color-primary);

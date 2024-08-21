@@ -4,9 +4,8 @@ import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import StyledComponentsRegistry from '@/styles/styled-components/registry';
-import { ThemeContextProvider } from '@/contexts/theme';
 import { Header, Main, Footer } from './components/layout/exports';
+import { AppProviders } from '@/providers/providers';
 
 export const metadata: Metadata = {
   title: 'Raffa-Dev | Portfolio',
@@ -18,25 +17,23 @@ export const metadata: Metadata = {
 };
 
 const poppins = Poppins({
-  weight: ['300', '700'],
+  weight: ['300', '600', '700'],
   subsets: ['latin']
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br" className={poppins.className}>
-      <StyledComponentsRegistry>
-        <body>
-          <ThemeContextProvider>
-            <Header />
-            <Main>
-              {children}
-              <Analytics />
-            </Main>
-            <Footer />
-          </ThemeContextProvider>
-        </body>
-      </StyledComponentsRegistry>
+      <body>
+        <AppProviders>
+          <Header />
+          <Main>
+            {children}
+            <Analytics />
+          </Main>
+          <Footer />
+        </AppProviders>
+      </body>
     </html>
   );
 }

@@ -6,11 +6,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: '__Poppins_0be235', '__Poppins_Fallback_0be235';
 }
 
 html{
     font-size: 62.5%;
-    
 }
 
 body {
@@ -19,6 +23,8 @@ body {
     --color-tertiary:#{map-get($lightThemeColors ,"tertiary")};
     --font-color-primary: #{map-get($lightThemeColors, "font-primary")};
     --font-color-secondary: #{map-get($lightThemeColors, "font-secondary")};
+    --shaddow-color-primary: #{map-get($lightThemeColors, "shaddow-primary")};
+    --shaddow-color-secondary: #{map-get($lightThemeColors, "shaddow-secondary")};
 
     display: flex;
     flex-direction: column;
@@ -34,6 +40,9 @@ body {
         --color-tertiary:#{map-get($darkThemeColors ,"tertiary")};
         --font-color-primary: #{map-get($darkThemeColors, "font-primary")};
         --font-color-secondary: #{map-get($darkThemeColors, "font-secondary")};
+        --shaddow-color-primary: #{map-get($darkThemeColors, "shaddow-primary")};
+        --shaddow-color-secondary: #{map-get($darkThemeColors, "shaddow-secondary")};
+
     }
 
     &::-webkit-scrollbar{
@@ -41,6 +50,7 @@ body {
     }
     &::-webkit-scrollbar-track{
         background-color: var(--color-secondary);
+        padding: 8px;
     }
     &::-webkit-scrollbar-thumb {
         background-color: var(--color-primary);

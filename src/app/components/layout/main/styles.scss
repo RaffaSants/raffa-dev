@@ -1,8 +1,7 @@
 main{
-    padding: 0px 5%;
     min-height: calc(100vh - 17rem);
-    margin: 2.5rem 0px;
     transition: all 350ms ease 0s;
     gap: 1rem;
     display: flex;
+    flex-direction: column;
 }
