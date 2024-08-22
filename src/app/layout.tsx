@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import { Header, Main, Footer } from './components/layout/exports';
+import { Header, Main, Footer } from './layout/exports';
 import { AppProviders } from '@/providers/providers';
 
 export const metadata: Metadata = {

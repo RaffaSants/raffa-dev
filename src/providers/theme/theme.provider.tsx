@@ -5,12 +5,13 @@ import { ThemeContext } from './context/theme.context';
 
 export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
   const [isDarkTheme, setTheme] = useState<boolean>(() => {
-    if (window) {
-      return localStorage.getItem('isDarkTheme')?.toLowerCase() === 'true'
-        ? true
-        : false;
+    try {
+      return (
+        localStorage.getItem('isDarkTheme')?.toLowerCase() === 'true' && true
+      );
+    } catch (error) {
+      return false;
     }
-    return false;
   });
 
   const toggleTheme = () => {
