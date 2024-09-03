@@ -1,0 +1,70 @@
+@import "/src/styles/animations/animations.scss";
+
+.services-list{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: fit-content;
+    object-fit: cover;
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--font-color-secondary);
+        width: 30%;
+        padding: 1.6rem 2.4rem;
+        gap: 0.8rem;
+        min-height: 32.8rem;
+
+        figure{
+            svg{
+                height: 10rem;
+                width: 10rem;
+            }
+        }
+
+        h3{
+            font-size: 2.4rem;
+        }
+
+        p{
+            font-size: 1.6rem;
+            text-align: start;
+        }
+        &:nth-child(1){
+            border-top:#c19a78 1px solid ;
+            border-top-right-radius: 10px;
+            animation: moveToUp ease-in-out;
+            animation-timeline: view();
+            animation-range: cover 0% cover 60%;
+        }
+        &:nth-child(2){
+            border-bottom:#c19a78 1px solid ;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-left: #c19a78 1px solid;
+            border-right: #c19a78 1px solid;
+            position: relative;
+            animation: moveToDown ease-in-out;
+            animation-timeline: view();
+            animation-range: cover 0% cover 60%;
+
+            &::after{
+                content: " ";
+                width: 100%;
+                height: 5px;
+                position: absolute;
+                top: 0;
+                border: 1px solid var(--color-primary);
+            }
+        }
+        &:nth-child(3){
+            border-top:#c19a78 1px solid ;
+            border-top-left-radius: 10px;
+            animation: moveToUp ease-in-out;
+            animation-timeline: view();
+            animation-range: cover 0% cover 60%;
+        }
+    }
+
+}

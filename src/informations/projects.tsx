@@ -3,7 +3,11 @@ export type Project = {
   imageAlt: string;
   title: string;
   description: string;
-  technologies: string[];
+  links: {
+    prototype?: string;
+    repo?: string;
+    site?: string;
+  };
 };
 
 export const projects: Project[] = [
@@ -13,16 +17,9 @@ export const projects: Project[] = [
     title: 'CoreNote App',
     description:
       'projeto de gestão de tarefas proposto pela empresa Corelab em seu desafio de código. O projeto consiste no desenvolvimento de um aplicativo (front-end e back-end) que permite aos usuários gerenciar suas tarefas por meio de blocos de notas, possibilitando a criação, visualização, edição e exclusão de notas, além de classificá-las por cores e favoritos.',
-    technologies: [
-      'Typescript',
-      'Nextjs',
-      'React',
-      'SASS',
-      'Redux',
-      'Nextjs',
-      'Postgresql',
-      'express'
-    ]
+    links: {
+      prototype: '#'
+    }
   },
   {
     imageSrc: '',
@@ -30,16 +27,10 @@ export const projects: Project[] = [
     title: 'CoreNote App',
     description:
       'projeto de gestão de tarefas proposto pela empresa Corelab em seu desafio de código. O projeto consiste no desenvolvimento de um aplicativo (front-end e back-end) que permite aos usuários gerenciar suas tarefas por meio de blocos de notas, possibilitando a criação, visualização, edição e exclusão de notas, além de classificá-las por cores e favoritos.',
-    technologies: [
-      'Typescript',
-      'Nextjs',
-      'React',
-      'SASS',
-      'Redux',
-      'Nextjs',
-      'Postgresql',
-      'express'
-    ]
+    links: {
+      prototype: '#',
+      repo: '#'
+    }
   },
   {
     imageSrc: '',
@@ -47,15 +38,10 @@ export const projects: Project[] = [
     title: 'CoreNote App',
     description:
       'projeto de gestão de tarefas proposto pela empresa Corelab em seu desafio de código. O projeto consiste no desenvolvimento de um aplicativo (front-end e back-end) que permite aos usuários gerenciar suas tarefas por meio de blocos de notas, possibilitando a criação, visualização, edição e exclusão de notas, além de classificá-las por cores e favoritos.',
-    technologies: [
-      'Typescript',
-      'Nextjs',
-      'React',
-      'SASS',
-      'Redux',
-      'Nextjs',
-      'Postgresql',
-      'express'
-    ]
+    links: {
+      prototype: '#',
+      repo: '#',
+      site: '#'
+    }
   }
 ];

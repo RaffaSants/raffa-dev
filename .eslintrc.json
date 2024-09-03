@@ -40,5 +40,5 @@
             }
         ]
     },
-    "ignorePatterns":["src/**/style.ts","src/**/*.scss","next.config.js"]
+    "ignorePatterns":["src/**/*.scss","next.config.js"]
 }

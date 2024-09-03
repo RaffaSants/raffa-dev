@@ -1,4 +1,6 @@
-.SectionMain{
+@import"/src/styles/animations/animations.scss";
+
+.Introducion{
     display: flex;
     flex-flow: row wrap-reverse;
     transition: all 350ms ease 0s;
@@ -7,10 +9,10 @@
     align-items: center;
     height: calc(100vh - 6rem);
     padding: 0rem 8%;
-    background-color: var(--color-primary);
-    border-radius: 0rem 0rem 0rem 20rem;
+    background-color: var(--color-secondary);
+    border-radius: 0rem 0rem 10rem 10rem;
 
-    .SectionText{
+    .SectionTexts{
         display: flex;
         flex-direction: column;
         transition: all 350ms ease 0s;
@@ -24,12 +26,13 @@
             user-select: none;
             font-weight: 700;
             line-height: 95%;
-            color: #100C29;
-            font-size: 9.6rem;
+            color: var(--font-color-tertiary);
+            font-size: 7.2rem;
         }
     
         p{
-            font-size: 1.8rem;
+            font-size: 3.6rem;
+            font-weight: 700;
             text-align: justify;
             color: #FFFFFF;
             user-select: none;
@@ -42,37 +45,49 @@
     }
 }
 
-.SectionKnowledge, 
-.SectionProjects, 
-.SectionContact{
+#Services,
+#Tools, 
+#Projects, 
+#Contact{
     display: flex;
     flex-direction: column;
     text-align: center;
     color: var(--font-color-primary);
     gap: 4.8rem;
     padding: 10rem 8% 3rem 8%;
+    animation: moveToDown ease-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 60%;
     
-    .SectionText{
+    .SectionTexts{
+        user-select: none;
+        
         .title{
             font-weight: bold;
+            font-size: 2.4rem;
+            color: var(--font-color-secondary);
+        }
+
+        .subtitle{
+            font-weight: 700;
             font-size: 3.2rem;
-            user-select: none;
+            color: var(--font-color-primary);
         }
         
         .description{
             color: var(--font-color-secondary);
-            font-size: 18px;
+            font-size: 1.8rem;
             font-weight: normal;
             text-align: justify;
-            user-select: none;
         }
     }
 
 }
-.SectionProjects{
+#Projects{
     padding-bottom: 10rem;
 }
-.SectionContact{
+#Contact{
+    display: none;
     transition: all 350ms ease 0s;
     flex-direction: row;
     flex-wrap: wrap;

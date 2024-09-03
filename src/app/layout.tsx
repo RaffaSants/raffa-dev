@@ -8,16 +8,16 @@ import { Header, Main, Footer } from './layout/exports';
 import { AppProviders } from '@/providers/providers';
 
 export const metadata: Metadata = {
-  title: 'Raffa-Dev | Portfolio',
+  title: 'Raffa-Dev | Desenvolvedor web',
   description:
-    'Desenvolvedor web front-end, com conhecimento em React, Nextjs, Styled-components, Jest, entre outras tecnologias utilizadas no bom desenvolvimento de aplicações web modernas.',
+    'Desenvolvedor web Full-Stack, Construindo a presença online que você sempre sonhou para o sucesso do seu negócio.',
   authors: { name: 'Rafael da Conceição' },
   viewport: { width: 'device-width', initialScale: 1 },
   verification: { google: 'cCEDzs4cgWkqPsc0WPKXQyDxxnCaGxqZbF6XpjWzX64' }
 };
 
 const poppins = Poppins({
-  weight: ['300', '600', '700'],
+  weight: ['300', '400', '600', '700'],
   subsets: ['latin']
 });
 

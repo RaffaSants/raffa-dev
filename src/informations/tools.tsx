@@ -24,13 +24,13 @@ import {
 } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 
-type IKnowledge = {
+type Tool = {
   title: string;
   icon: ReactNode;
   linkToDoc: string;
 };
 
-export const Knowledges: IKnowledge[] = [
+export const Tools: Tool[] = [
   {
     title: 'HTML',
     icon: <FaHtml5 />,

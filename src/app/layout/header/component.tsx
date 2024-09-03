@@ -6,6 +6,17 @@ export const Header = () => {
   return (
     <header>
       <Logo />
+      <ul>
+        <li>
+          <a href="#Services">Serviços</a>
+        </li>
+        <li>
+          <a href="#Projects">Projetos</a>
+        </li>
+        <li>
+          <a href="#Tools">Tecnologias</a>
+        </li>
+      </ul>
       <ToggleToDarkTheme />
     </header>
   );

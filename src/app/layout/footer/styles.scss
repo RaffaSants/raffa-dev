@@ -4,12 +4,12 @@ footer{
     transition: all 350ms ease 0s;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-secondary);
     display: flex;
     flex-flow: row wrap;
 
     p{
         font-size: 1.4rem;
-        color: var(--font-color-primary);
+        color: #ECEBEB;
     }
 }

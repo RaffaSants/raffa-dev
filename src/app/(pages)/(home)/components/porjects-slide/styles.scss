@@ -1,0 +1,151 @@
+@import "/src/styles/animations/animations.scss";
+
+.projects-slide {
+    $width: 100%;
+    $height: 400px;
+    $padding: 2.4rem;
+    $border-radius:2.4rem;
+    $box-shadow: 0 0 5px 1px black;
+    $animation-time: 0.6s;
+
+
+    position: relative;
+    display: flex;
+    padding: $padding;
+    gap: 0.8rem;
+    width: $width;
+    height: $height;
+    color: var(--font-color-tertiary);
+    overflow: clip;
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: #020a1c;
+        width: 85%;
+        height: calc($height - $padding);
+        right: 0;
+        top: $padding;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        z-index: -1;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+        width: 100%;
+        height: calc($height - ($padding));
+        animation: textAnimation $animation-time cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-timeline: view();
+        animation-range: 20% 50%;
+        
+        article{
+            display: none;
+            width: calc($width - ($padding * 2));
+            height: calc($height - ($padding));
+            align-items: center;
+            gap: 32px;
+
+            figure{
+                width: 40%;
+                height: 280px;
+                background-color: white;
+                border-radius: $border-radius;
+                box-shadow: $box-shadow;
+            }
+
+            section{
+                width: 60%;
+                height: 100%;
+                padding-top: 4.2rem;
+                position: relative;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+
+                h3{
+                    font-weight: 700;
+                    font-size: 2.4rem;
+                }
+
+                p{
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                }
+                
+                ul{
+                    position: absolute;
+                    display: flex;
+                    gap: 2.4rem;
+                    bottom: $padding;
+                    right: 1.6rem;
+
+                    li{
+                         
+                        padding: 0.4rem 0.8rem;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        border: 1px solid var(--font-color-tertiary);
+                        border-radius: 5px;
+                        
+                        a{
+                            display: flex;
+                            gap: 0.4rem;
+                            align-items: center;
+                            color: var(--font-color-tertiary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .index-carousel {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 40px;
+        right: 0;
+        top: 0;
+        background: transparent;
+
+        label{
+            input[name="index"]{
+                appearance: none;
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+                border: 1px solid var(--font-color-tertiary);
+                border-radius: 50%;
+
+                &:checked{
+                    height: 22px;
+                    border-radius: 40%;
+                    background-color: var(--font-color-tertiary);
+                }
+            }
+        }
+
+
+    }
+
+    @for $i from 1 through 5 {
+        .index-carousel:has(label input[value="#{$i}"]:checked) ~ article[name="item-#{$i}"]{
+            display: flex;
+
+            figure{
+                animation: scaleFigure $animation-time cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+
+            section{
+                animation: textAnimation $animation-time cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+        }
+    }
+}  

@@ -10,7 +10,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    font-family: '__Poppins_0be235', '__Poppins_Fallback_0be235';
+    font-family: '__Poppins_ffa0aa', '__Poppins_Fallback_ffa0aa';
 }
 
 html{
@@ -23,12 +23,14 @@ body {
     --color-tertiary:#{map-get($lightThemeColors ,"tertiary")};
     --font-color-primary: #{map-get($lightThemeColors, "font-primary")};
     --font-color-secondary: #{map-get($lightThemeColors, "font-secondary")};
+    --font-color-tertiary: #{map-get($lightThemeColors, "font-tertiary")};
+    --font-color-normal: #{map-get($lightThemeColors, "font-normal")};
     --shaddow-color-primary: #{map-get($lightThemeColors, "shaddow-primary")};
     --shaddow-color-secondary: #{map-get($lightThemeColors, "shaddow-secondary")};
 
     display: flex;
     flex-direction: column;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     transition: all 3.5ms ease;
     min-height: 100vh;
     position: relative;
@@ -40,6 +42,8 @@ body {
         --color-tertiary:#{map-get($darkThemeColors ,"tertiary")};
         --font-color-primary: #{map-get($darkThemeColors, "font-primary")};
         --font-color-secondary: #{map-get($darkThemeColors, "font-secondary")};
+        --font-color-tertiary: #{map-get($darkThemeColors, "font-tertiary")};
+        --font-color-normal: #{map-get($darkThemeColors, "font-normal")};
         --shaddow-color-primary: #{map-get($darkThemeColors, "shaddow-primary")};
         --shaddow-color-secondary: #{map-get($darkThemeColors, "shaddow-secondary")};
 
@@ -49,13 +53,13 @@ body {
         width: 5px;
     }
     &::-webkit-scrollbar-track{
-        background-color: var(--color-secondary);
+        background-color: var(--color-primary);
         padding: 8px;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: var(--color-primary);
+        background-color: var(--color-secondary);
         border-radius: 20px;
-        border:  var(--color-secondary);
+        border:  var(--color-primary);
     }
 }
 

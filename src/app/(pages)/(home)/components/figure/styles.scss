@@ -11,6 +11,6 @@
 
     img{
         object-fit: contain;
-        filter: brightness(0.1) drop-shadow(2px 4px 11px black);
+        filter: drop-shadow(2px 4px 11px black) saturate(0.5) brightness(1.5);
     }
 }

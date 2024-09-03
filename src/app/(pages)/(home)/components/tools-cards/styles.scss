@@ -1,3 +1,5 @@
+@import "/src/styles/animations/animations.scss";
+
 .knowledge-list{
     display: flex;
     flex-direction: column;
@@ -6,6 +8,10 @@
     height: 43rem;
 
     li{
+        animation: appear 1.1s both;
+        animation-timeline: view();
+        animation-range-end: 30%;
+
         a{
             article{
                 display: flex;
@@ -18,7 +24,7 @@
                 color:var(--font-color-primary);
                 border-radius: 5px;
                 box-shadow: 0px 0px 5px 1px var(--shaddow-color-primary);
-
+                
                 figure {
                     svg{
                         height: 4rem;
