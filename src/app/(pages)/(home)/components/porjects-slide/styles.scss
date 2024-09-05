@@ -118,20 +118,22 @@
             right: 0;
             bottom: 0;
             background: transparent;
-    
-            label{
-                input[name="index"]{
-                    appearance: none;
-                    cursor: pointer;
-                    width: 15px;
-                    height: 15px;
-                    border: 1px solid var(--font-color-tertiary);
-                    border-radius: 50%;
-    
-                    &:checked{
-                        width: 22px;
-                        border-radius: 40%;
-                        background-color: var(--font-color-tertiary);
+            
+            li{
+                label{
+                    input[name="index"]{
+                        appearance: none;
+                        cursor: pointer;
+                        width: 15px;
+                        height: 15px;
+                        border: 1px solid var(--font-color-tertiary);
+                        border-radius: 50%;
+        
+                        &:checked{
+                            width: 22px;
+                            border-radius: 40%;
+                            background-color: var(--font-color-tertiary);
+                        }
                     }
                 }
             }
@@ -140,11 +142,13 @@
                 flex-direction: column;
                 height: 100%;
                 width: 40px;
-    
-                label{
-                    input[name="index"]:checked{
-                        height: 22px;
-                        width: 15px;
+                
+                li{          
+                    label{
+                        input[name="index"]:checked{
+                            height: 22px;
+                            width: 15px;
+                        }
                     }
                 }    
             }
@@ -152,7 +156,7 @@
     }
 
     @media screen and (min-width: 768px){
-        $height: 400px;
+        $height: 40rem;
 
         &::before{
             width: 85%;
@@ -194,6 +198,18 @@
             
         }
 
+    }
+    
+    @media screen and (min-width: 768px){
+        .items{
+            article{
+                section{
+                    ul{
+                        bottom: 0;
+                    }
+                }
+            }
+        }
     }
 
     @for $i from 1 through 5 {

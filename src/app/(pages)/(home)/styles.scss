@@ -33,7 +33,7 @@
         p{
             font-size: 3.2rem;
             font-weight: 700;
-            text-align: justify;
+            text-align: left;
             color: #FFFFFF;
             user-select: none;
             line-height: 1.4;
@@ -60,11 +60,23 @@
             }
         }
     }
+
+    @media screen and (min-width: 1460px){
+        .SectionTexts{
+            h1{
+                font-size: 6.4rem;
+            }
+
+            p{
+                line-height: 1.1;
+            }
+        }
+    }
 }
 
 #Services,
-#Tools, 
 #Projects, 
+#Tools, 
 #Contact{
     display: flex;
     flex-direction: column;
@@ -98,18 +110,31 @@
             color: var(--font-color-secondary);
             font-size: 1.8rem;
             font-weight: normal;
-            text-align: justify;
+            text-align: left;
         }
     }
 
     @media screen and (min-width: 768px){
         padding: 10rem 8% 3rem 8%;       
     }
+
+    @media screen and (min-width: 1460px){
+        .SectionTexts{
+            .subtitle{
+                font-size: 3.6rem;
+                line-height: 0.9;
+            }
+            .description{
+                font-size: 2.2rem;
+            }
+        }
+    }
 }
 
-#Projects{
+#Tools{
     padding-bottom: 10rem;
 }
+
 #Contact{
     display: none;
     transition: all 350ms ease 0s;
@@ -120,7 +145,7 @@
     background-color: var(--color-primary);
     border-radius: 20rem 0rem 0rem 0rem;
     
-    .SectionText{
+    .SectionTexts{
         width: 100%;
         .title{
             color: #FFFFFF;

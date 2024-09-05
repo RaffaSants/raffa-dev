@@ -21,7 +21,7 @@ export default function Page() {
       </section>
       <section id="Services">
         <section className="SectionTexts">
-          <h2 className="title">Services</h2>
+          <h2 className="title">Serviços</h2>
           <h3 className="subtitle">Eleve a presença digital do seu negócio.</h3>
           <p className="description">
             Desenvolvemos interfaces modernas e intuitivas, sites personalizados

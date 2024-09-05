@@ -1,12 +1,10 @@
-@import "~bootstrap-icons/font/bootstrap-icons.css";
 @import "../../../../styles/mixins/inline-animation.mixin.scss";
 
-input[name="toggleToDarkTheme"]{
-    appearance: none;
+.toggleTheme{
     cursor: pointer;
-    width: fit-content;
-    height: fit-content;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include inline-animation(2s, infinite, alternate){
         from{
@@ -16,15 +14,13 @@ input[name="toggleToDarkTheme"]{
         }
     }
 
-    &::before{
-        content: "\f495";
-        font-family: "bootstrap-icons";
-        font-size: 2.8rem;
-        transition: content 350ms ease;
-        color: var(--font-color-normal);
+    input[name="toggleToDarkTheme"]{
+        appearance: none;
+        width: 100%;
+        height: 100%;
     }
 
-    &:checked{
+    &:has(input[name="toggleToDarkTheme"]:checked){
         @include inline-animation(25s, infinite, none){
             from{  
                 transform: rotate(0deg);
@@ -32,16 +28,34 @@ input[name="toggleToDarkTheme"]{
                 transform: rotate(360deg);
             }
         }
-
-        &::before{
-            content: "\f5a1";
-            
+    
+        figure{
+            svg[aria-label="desativar tema escuro"]{
+                display: unset;
+            }
+            svg[aria-label="ativar tema escuro"]{
+                display: none;
+            }
         }
+        
     }
+    
+    figure{
+        font-size: 2.8rem;
+        transition: content 350ms ease;
+        color: var(--font-color-normal);
+        display: flex;
+        align-items: center;
+        
 
+        svg[aria-label="desativar tema escuro"]{
+            display: none;
+        }
+        svg[aria-label="ativar tema escuro"]{
+            display: unset;
+        }
 
-}
-
-@keyframes rotate {
+    }
     
 }
+

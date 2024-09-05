@@ -8,10 +8,10 @@
     align-items: center;
 }
 .Menu{
+    display: none;
     width: 100%;
     padding: 0.8rem 2.8rem;
     height: fit-content;
-    display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 2;
@@ -22,7 +22,7 @@
 }
 
 .Menu[show="true"]{
-    
+    display: flex;
     animation: scale-in-tr 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
     .navigation{
@@ -35,6 +35,7 @@
 }
 
 .Menu[show="false"]{
+    display: flex;
     animation: scale-out-tr 0.5s 0.1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 

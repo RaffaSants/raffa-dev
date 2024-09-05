@@ -77,15 +77,17 @@ export const ProjectsSlide = () => {
   const generateIndex = () => {
     return projects.map((_, index) => {
       return (
-        <label key={`carousel-index-${index + 1}`}>
-          <input
-            type="checkbox"
-            name="index"
-            value={index + 1}
-            checked={index + 1 === indexChecked && true}
-            onChange={() => inputIndexChanged(index + 1)}
-          />
-        </label>
+        <li key={`carousel-index-${index + 1}`}>
+          <label>
+            <input
+              type="checkbox"
+              name="index"
+              value={index + 1}
+              checked={index + 1 === indexChecked && true}
+              onChange={() => inputIndexChanged(index + 1)}
+            />
+          </label>
+        </li>
       );
     });
   };
