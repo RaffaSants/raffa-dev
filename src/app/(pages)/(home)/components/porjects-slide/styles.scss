@@ -2,7 +2,7 @@
 
 .projects-slide {
     $width: 100%;
-    $height: 400px;
+    $height: fit-content;
     $padding: 2.4rem;
     $border-radius:2.4rem;
     $box-shadow: 0 0 5px 1px black;
@@ -22,10 +22,9 @@
         content: "";
         position: absolute;
         background-color: #020a1c;
-        width: 85%;
-        height: calc($height - $padding);
-        right: 0;
-        top: $padding;
+        width: calc(100% - $padding * 2);
+        height: 80%;
+        bottom: $padding;
         border-radius: $border-radius;
         box-shadow: $box-shadow;
         z-index: -1;
@@ -33,38 +32,43 @@
 
     .items {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         gap: 4.8rem;
         width: 100%;
-        height: calc($height - ($padding));
+        height: calc(100% - ($padding));
+        padding-bottom: 36px;
         animation: textAnimation $animation-time cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation-timeline: view();
         animation-range: 20% 50%;
         
         article{
             display: none;
+            flex-direction: column;
             width: calc($width - ($padding * 2));
-            height: calc($height - ($padding));
+            height: calc(100% - ($padding));
             align-items: center;
-            gap: 32px;
+            gap: 12px;
 
             figure{
-                width: 40%;
-                height: 280px;
+                width: 100%;
+                height: 40%;
+                min-height: 200px;
                 background-color: white;
                 border-radius: $border-radius;
                 box-shadow: $box-shadow;
             }
 
             section{
-                width: 60%;
-                height: 100%;
-                padding-top: 4.2rem;
+                width: 100%;
+                height: 60%;
+                
                 position: relative;
                 text-align: left;
                 display: flex;
                 flex-direction: column;
                 gap: 0.8rem;
+                padding-bottom: 72px;
 
                 h3{
                     font-weight: 700;
@@ -79,12 +83,11 @@
                 ul{
                     position: absolute;
                     display: flex;
-                    gap: 2.4rem;
+                    gap: .8rem;
                     bottom: $padding;
-                    right: 1.6rem;
+                    right: .6rem;
 
                     li{
-                         
                         padding: 0.4rem 0.8rem;
                         font-size: 1.6rem;
                         font-weight: 400;
@@ -101,37 +104,94 @@
                 }
             }
         }
-    }
 
-    .index-carousel {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 40px;
-        right: 0;
-        top: 0;
-        background: transparent;
-
-        label{
-            input[name="index"]{
-                appearance: none;
-                cursor: pointer;
-                width: 15px;
-                height: 15px;
-                border: 1px solid var(--font-color-tertiary);
-                border-radius: 50%;
-
-                &:checked{
-                    height: 22px;
-                    border-radius: 40%;
-                    background-color: var(--font-color-tertiary);
+        .index-carousel {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            height: 40px;
+            width: 100%;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+    
+            label{
+                input[name="index"]{
+                    appearance: none;
+                    cursor: pointer;
+                    width: 15px;
+                    height: 15px;
+                    border: 1px solid var(--font-color-tertiary);
+                    border-radius: 50%;
+    
+                    &:checked{
+                        width: 22px;
+                        border-radius: 40%;
+                        background-color: var(--font-color-tertiary);
+                    }
                 }
             }
+    
+            @media screen and (min-width: 768px) {
+                flex-direction: column;
+                height: 100%;
+                width: 40px;
+    
+                label{
+                    input[name="index"]:checked{
+                        height: 22px;
+                        width: 15px;
+                    }
+                }    
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        $height: 400px;
+
+        &::before{
+            width: 85%;
+            height: calc($height - $padding);
+            right: 0;
+            top: $padding;    
         }
 
+        .items{
+            flex-direction: column;
+            justify-content: unset;
+            height: calc($height - ($padding));
+            padding-top: 2.4rem;
+
+            article{
+                height: calc($height - ($padding));
+                gap: 32px;
+                flex-direction: row;
+                
+                figure{
+                    width: 40%;
+                    height: 280px;
+    
+                }
+
+                section{
+                    width: 60%;
+                    height: 100%;
+                    padding-top: 4.2rem;
+                    padding-bottom: unset;
+
+                    ul{
+                        gap: 2.4rem;
+                        right: 1.6rem;
+                    }
+                }
+            }
+
+            
+        }
 
     }
 

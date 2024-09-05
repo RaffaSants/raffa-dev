@@ -39,7 +39,7 @@ export const ProjectsSlide = () => {
                     rel="noreferrer"
                     aria-label="go to prototype"
                   >
-                    <FaFigma /> ver design
+                    <FaFigma /> design
                   </a>
                 </li>
               )}
@@ -51,7 +51,7 @@ export const ProjectsSlide = () => {
                     rel="noreferrer"
                     aria-label="go to repository"
                   >
-                    <FaGithub /> ver código
+                    <FaGithub /> código
                   </a>
                 </li>
               )}

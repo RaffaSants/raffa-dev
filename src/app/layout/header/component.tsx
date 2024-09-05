@@ -1,23 +1,19 @@
-import { Logo } from '@/app/components/logo/component';
 import './styles.scss';
+
+import { Logo } from '@/app/components/logo/component';
 import { ToggleToDarkTheme } from '@/app/components/buttons/toggleTheme/component';
+import { Nav } from '@/app/components/nav/componente';
+import { BtMenu } from '@/app/components/buttons/toggleMenu/component';
 
 export const Header = () => {
   return (
     <header>
       <Logo />
-      <ul>
-        <li>
-          <a href="#Services">Serviços</a>
-        </li>
-        <li>
-          <a href="#Projects">Projetos</a>
-        </li>
-        <li>
-          <a href="#Tools">Tecnologias</a>
-        </li>
-      </ul>
-      <ToggleToDarkTheme />
+      <Nav />
+      <section className="butons">
+        <ToggleToDarkTheme />
+        <BtMenu />
+      </section>
     </header>
   );
 };

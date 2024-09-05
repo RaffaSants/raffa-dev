@@ -1,8 +1,8 @@
 .main-figure{
     position: relative;
     height: 95%;
-    min-height: 25rem;
-    width: 45%;
+    min-height: 45rem;
+    width: 100%;
     min-width: 30rem;
     display: flex;
     flex-direction: column;
@@ -12,5 +12,9 @@
     img{
         object-fit: contain;
         filter: drop-shadow(2px 4px 11px black) saturate(0.5) brightness(1.5);
+    }
+
+    @media screen and (min-width: 768px) {
+       width: 45%; 
     }
 }
