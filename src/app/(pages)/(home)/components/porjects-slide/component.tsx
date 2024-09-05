@@ -85,6 +85,7 @@ export const ProjectsSlide = () => {
               value={index + 1}
               checked={index + 1 === indexChecked && true}
               onChange={() => inputIndexChanged(index + 1)}
+              aria-label={`mostrar item nº ${index + 1}`}
             />
           </label>
         </li>
