@@ -66,6 +66,7 @@
                 animation: moveToUp ease-in-out;
                 animation-timeline: view();
                 animation-range: cover 0% cover 60%;
+                border-bottom: unset;
             }
             &:nth-child(2){
                 border-bottom:#c19a78 1px solid ;

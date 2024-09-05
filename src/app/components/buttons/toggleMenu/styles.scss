@@ -1,12 +1,13 @@
 .buttonShowMenu,
 .buttonHiddenMenu{
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     color: var(--font-color-normal);
     outline: none;
     background-color: transparent;
+    display: flex;
+    align-items: center;
 }
-
-.Menu[show="true"]{
+.Menu{
     width: 100%;
     padding: 0.8rem 2.8rem;
     height: fit-content;
@@ -17,8 +18,12 @@
     top: 6rem;
     right: 0;
     background-color: var(--color-tertiary);
-    animation: slide-in-fwd-top 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     border-radius: 0 0 20px 20px;
+}
+
+.Menu[show="true"]{
+    
+    animation: scale-in-tr 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
     .navigation{
         display:flex;
@@ -29,8 +34,8 @@
     }
 }
 
-.Menu{
-    animation: slide-out-bck-top 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+.Menu[show="false"]{
+    animation: scale-out-tr 0.5s 0.1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @media screen and (min-width: 768px) {

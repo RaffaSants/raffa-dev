@@ -19,12 +19,21 @@ header{
     .butons{
         display: flex;
         align-items: center;
-        gap: 1.2rem;
+        gap: 1.8rem;
+        .Menu{
+            .navigation{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
 
     @media screen and (min-width: 768px) {
         .navigation{
-            display: unset;
+            display: flex;
+            gap: 2.4rem;
         }
     }
 }
