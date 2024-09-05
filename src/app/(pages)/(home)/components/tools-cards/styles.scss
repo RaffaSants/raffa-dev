@@ -7,20 +7,19 @@
     gap: 0.8rem;
     height: fit-content;
     max-height: 698px;
-    
-
-    li{
-        animation: appear 1.1s both;
-        animation-timeline: view();
-        animation-range-end: 10%;
-        animation-range-start: -10%;
+            
 
         a{
+            animation: appear 1.1s both;
+            animation-timeline: view();
+            animation-range-end: 10%;
+            animation-range-start: -10%;
+            
             article{
                 display: flex;
                 justify-content: left;
                 gap: 0.8rem;
-                padding: 1.2rem 0.8rem;
+                padding: 1.2rem 1.2rem;
                 align-items: center;
                 min-width: 18rem;
                 max-width: 22rem;
@@ -46,14 +45,13 @@
                 }
             }
         }
-    }
 
     @media screen and (min-width: 768px){
         height: 43rem ;
         max-height: unset;
         padding-bottom: 48px;
-        
-        li{
+
+        a{
             animation-range-end: 30%;
         }
     }

@@ -7,14 +7,17 @@ export const ToolsCards = () => {
   const generateCard = () => {
     return Tools.map((tool) => {
       return (
-        <li key={`tool-${tool.title}`}>
-          <Link href={tool.linkToDoc} target="_blank">
-            <article>
-              <figure>{tool.icon}</figure>
-              <p>{tool.title}</p>
-            </article>
-          </Link>
-        </li>
+        <Link
+          key={`tool-${tool.title}`}
+          href={tool.linkToDoc}
+          target="_blank"
+          aria-label={`go to ${tool.title} site`}
+        >
+          <article>
+            <figure>{tool.icon}</figure>
+            <p>{tool.title}</p>
+          </article>
+        </Link>
       );
     });
   };
