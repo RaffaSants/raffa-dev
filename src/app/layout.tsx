@@ -3,6 +3,7 @@ import '../styles/global.scss';
 import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { Header, Main, Footer } from './layout/exports';
 import { AppProviders } from '@/providers/providers';
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </Main>
           <Footer />
         </AppProviders>
+        <SpeedInsights />
       </body>
     </html>
   );
