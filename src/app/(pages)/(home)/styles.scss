@@ -131,24 +131,11 @@
     }
 }
 
-#Tools{
-    padding-bottom: 10rem;
-}
 
 #Contact{
-    display: none;
-    transition: all 350ms ease 0s;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: calc(100vh - 11rem);
-    padding: 3rem 8%;
-    background-color: var(--color-primary);
-    border-radius: 20rem 0rem 0rem 0rem;
-    
-    .SectionTexts{
-        width: 100%;
-        .title{
-            color: #FFFFFF;
-        }
+    gap: 2.4rem;
+
+    @media screen and (min-width: 768px){
+        padding-bottom: 15rem;
     }
 }

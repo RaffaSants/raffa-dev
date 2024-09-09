@@ -2,9 +2,9 @@ import './styles.scss';
 
 import { SectionImage } from './components/figure/component';
 import { ToolsCards } from './components/tools-cards/component';
-import { ContactForm } from './components/contact-form/contact-form';
 import { ServicesCardList } from './components/services-cards/component';
 import { ProjectsSlide } from './components/porjects-slide/component';
+import { CallsToAction } from './components/calls to action/component';
 
 export default function Page() {
   return (
@@ -62,8 +62,16 @@ export default function Page() {
       <section id="Contact">
         <section className="SectionTexts">
           <h2 className="title">Contato</h2>
+          <h3 className="subtitle"> Dê Vida aos Seus Projetos</h3>
+          <p className="description">
+            Está buscando um desenvolvedor de software especializado para criar
+            soluções personalizadas ou integrar à sua equipe? Entre em contato
+            comigo via WhatsApp ou envie um e-mail. Vamos juntos transformar seu
+            projeto em resultados de sucesso, com foco em inovação, performance
+            e usabilidade.
+          </p>
         </section>
-        <ContactForm />
+        <CallsToAction />
       </section>
     </>
   );
