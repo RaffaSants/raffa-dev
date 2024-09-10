@@ -156,12 +156,12 @@
     }
 
     @media screen and (min-width: 768px){
-        $height: 40rem;
 
         &::before{
             width: 85%;
-            height: calc($height - $padding);
-            right: 0;
+            min-height: 37.6rem;
+            height: calc(100% - ($padding * 2));
+            right: $padding;
             top: $padding;    
         }
 
@@ -172,7 +172,8 @@
             padding-top: 2.4rem;
 
             article{
-                height: calc($height - ($padding));
+                min-height: 37.6rem;
+                height: fit-content;
                 gap: 32px;
                 flex-direction: row;
                 
@@ -186,11 +187,11 @@
                     width: 60%;
                     height: 100%;
                     padding-top: 4.2rem;
-                    padding-bottom: unset;
 
                     ul{
                         gap: 2.4rem;
                         right: 1.6rem;
+                        bottom: 0;
                     }
                 }
             }
@@ -200,17 +201,6 @@
 
     }
     
-    @media screen and (min-width: 768px){
-        .items{
-            article{
-                section{
-                    ul{
-                        bottom: 0;
-                    }
-                }
-            }
-        }
-    }
 
     @for $i from 1 through 5 {
         .index-carousel:has(label input[value="#{$i}"]:checked) ~ article[name="item-#{$i}"]{

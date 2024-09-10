@@ -134,8 +134,9 @@
 
 #Contact{
     gap: 2.4rem;
+    padding-bottom: 50px;
 
     @media screen and (min-width: 768px){
-        padding-bottom: 15rem;
+        padding-bottom: 13rem;
     }
 }
