@@ -16,8 +16,8 @@
 
     &[variant="primary"]{
         color: var(--color-primary);
-        border: none;
-        background-color: var(--color-secondary);
+        border: 1px solid var(--color-primary);
+        background-color: var(--font-color-primary);
     }
 
     &[variant="secondary"]{

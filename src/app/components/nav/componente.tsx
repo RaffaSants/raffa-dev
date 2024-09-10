@@ -6,6 +6,7 @@ export const Nav = () => {
       <a href="#Services">Serviços</a>
       <a href="#Projects">Projetos</a>
       <a href="#Tools">Tecnologias</a>
+      <a href="#Contact">Contato</a>
     </nav>
   );
 };
