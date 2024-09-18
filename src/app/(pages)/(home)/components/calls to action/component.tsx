@@ -9,12 +9,17 @@ export const CallsToAction = () => {
     <section className="callsToAction">
       <ButtonCTA variant="secondary">
         enviar email
-        <MdOutlineMail />
+        <MdOutlineMail className="icon" />
       </ButtonCTA>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
+      <a
+        aria-label="chat on whatsapp"
+        href="https://wa.me/5521982794006"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <ButtonCTA variant="primary">
           enviar mensagem
-          <RiWhatsappFill fill="green" />
+          <RiWhatsappFill className="icon" fill="green" />
         </ButtonCTA>
       </a>
       {/*<ContactForm />*/}
