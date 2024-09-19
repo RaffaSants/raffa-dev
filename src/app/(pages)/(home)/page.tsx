@@ -4,7 +4,6 @@ import { SectionImage } from './components/figure/component';
 import { ToolsCards } from './components/tools-cards/component';
 import { ServicesCardList } from './components/services-cards/component';
 import { ProjectsSlide } from './components/porjects-slide/component';
-import { CallsToAction } from './components/calls to action/component';
 import { ContactForm } from './components/contact-form/contact-form';
 
 export default function Page() {
@@ -76,7 +75,6 @@ export default function Page() {
           </section>
           <ContactForm />
         </section>
-        {/*<CallsToAction />*/}
       </section>
     </>
   );
