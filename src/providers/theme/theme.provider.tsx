@@ -4,15 +4,9 @@ import { ReactNode, useState } from 'react';
 import { ThemeContext } from './context/theme.context';
 
 export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
-  const [isDarkTheme, setTheme] = useState<boolean>(() => {
-    try {
-      return (
-        localStorage.getItem('isDarkTheme')?.toLowerCase() === 'true' && true
-      );
-    } catch (error) {
-      return false;
-    }
-  });
+  const [isDarkTheme, setTheme] = useState<boolean>(
+    localStorage.getItem('isDarkTheme') === 'true' ? true : false
+  );
 
   const toggleTheme = () => {
     localStorage.setItem('isDarkTheme', isDarkTheme ? 'false' : 'true');
