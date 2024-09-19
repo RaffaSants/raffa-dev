@@ -1,6 +1,8 @@
+import { ButtonCTA } from '@/app/components/buttons/CTAs/component';
 import './styles.scss';
 
 import { FiSend } from 'react-icons/fi';
+import { RiWhatsappFill } from 'react-icons/ri';
 
 export const ContactForm = () => {
   return (
@@ -21,10 +23,21 @@ export const ContactForm = () => {
         <textarea placeholder="Mensagem" minLength={3} name="message" />
         <p className="msgError">*a mensage deve contar no mínimo 3 digítos</p>
       </label>
-      <button type="button">
-        <FiSend />
-        Enviar
-      </button>
+      <section className="actions">
+        <ButtonCTA variant="primary">
+          <FiSend />
+          Enviar
+        </ButtonCTA>
+        <a
+          aria-label="chat on whatsapp"
+          href="https://wa.me/5521982794006"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ou envie uma mensagem no whatsapp{' '}
+          <RiWhatsappFill className="icon" fill="green" />
+        </a>
+      </section>
     </form>
   );
 };

@@ -1,6 +1,6 @@
 @import"/src/styles/animations/animations.scss";
 
-.Introducion{
+#Introducion{
     display: flex;
     flex-flow: row wrap-reverse;
     transition: all 350ms ease 0s;
@@ -22,7 +22,7 @@
         width: 100%;
         padding-top: 1.6rem;
     
-        h1{
+        h1,h2{
             user-select: none;
             font-weight: 700;
             line-height: 1.1;
@@ -76,8 +76,7 @@
 
 #Services,
 #Projects, 
-#Tools, 
-#Contact{
+#Tools, #Contact{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -133,10 +132,27 @@
 
 
 #Contact{
-    gap: 2.4rem;
-    padding-bottom: 50px;
-
+    gap: 1.6rem;
+    
+    section:not([class]){
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+    
     @media screen and (min-width: 768px){
-        padding-bottom: 13rem;
+        padding-bottom: 7.5rem;
+        gap: 4.8rem;
+
+        section:not([class]){ 
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            gap: unset;
+            
+            .SectionTexts{
+                width: 50%;
+            }
+        }
     }
 }

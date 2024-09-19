@@ -5,11 +5,12 @@ import { ToolsCards } from './components/tools-cards/component';
 import { ServicesCardList } from './components/services-cards/component';
 import { ProjectsSlide } from './components/porjects-slide/component';
 import { CallsToAction } from './components/calls to action/component';
+import { ContactForm } from './components/contact-form/contact-form';
 
 export default function Page() {
   return (
     <>
-      <section className="Introducion">
+      <section id="Introducion">
         <section className="SectionTexts">
           <h1>Desenvolvedor Web Full-Stack</h1>
           <p>
@@ -61,17 +62,21 @@ export default function Page() {
       </section>
       <section id="Contact">
         <section className="SectionTexts">
-          <h2 className="title">Contato</h2>
-          <h3 className="subtitle"> Dê Vida aos Seus Projetos</h3>
-          <p className="description">
-            Está buscando um desenvolvedor de software especializado para criar
-            soluções personalizadas ou integrar à sua equipe? Entre em contato
-            comigo via WhatsApp ou envie um e-mail. Vamos juntos transformar seu
-            projeto em resultados de sucesso, com foco em inovação, performance
-            e usabilidade.
-          </p>
+          <h3 className="title">Contato</h3>
+          <h2 className="subtitle"> Dê Vida aos Seus Projetos</h2>
         </section>
-        <CallsToAction />
+        <section>
+          <section className="SectionTexts">
+            <p className="description">
+              Está buscando um desenvolvedor de software especializado para
+              criar soluções personalizadas ou integrar à sua equipe? Vamos
+              juntos transformar seu projeto em resultados de sucesso, com foco
+              em inovação, performance e usabilidade.
+            </p>
+          </section>
+          <ContactForm />
+        </section>
+        {/*<CallsToAction />*/}
       </section>
     </>
   );

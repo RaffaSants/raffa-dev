@@ -1,10 +1,10 @@
 .ContactForm{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 2.4rem;
-    padding: 1.2rem;
+    gap: 1.4rem;
+    padding: 1.2rem 0;
     
     label{
         display: flex;
@@ -15,9 +15,9 @@
             width: 100%;
             padding: 0.8rem;
             border-radius: 0.8rem 0.8rem 0rem 0rem;
-            background-color: #C8A48A;
-            border-bottom: 0.1rem solid #ECEBEB;
-            color: #FFFFFF;
+            background-color: #e0d6ce;
+            border-bottom: 0.1rem solid #05064d;
+            color: var(--font-color-primary);
             font-size: 1.8rem;
             font-weight: 600;
         }
@@ -27,28 +27,48 @@
             resize: none;
         };
 
-        textarea:invalid~p,
-        input:invalid~p {
+        textarea:invalid ~ .msgError,
+        input:invalid ~ .msgError {
             display: unset;
         }
 
-        p{  
+        .msgError{  
             display: none;
             font-size: 1.1rem;
             font-weight: 700;
             color: blanchedalmond;
         }
 
+        
     }
 
-    button{
+    .actions{
+        width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0.8rem;
-        gap: 0.8rem;
-        font-size: 1.8rem;
-        font-weight: 600;
-        border-radius: 0.8rem;
+        gap: 0.6rem;
+
+        .cta{
+            width: 100%;
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            font-size: 1.6rem;
+
+            &:hover{
+                color: var(--font-color-secondary);
+            }
+        
+        }
+    }
+    
+    @media screen and (min-width: 768px){
+        width: 45%;       
     }
 }

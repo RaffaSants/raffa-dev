@@ -21,12 +21,12 @@
             position: relative;
             animation: fade-in-left cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             animation-timeline: view();
-            animation-range: start;
+            animation-range: 10% 50%;
         }
         &:nth-child(3){
             animation: fade-in-left cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             animation-timeline: view();
-            animation-range: start;
+            animation-range: 10% 50%;
         }
 
         article{
