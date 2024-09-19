@@ -1,16 +1,17 @@
 'use client';
 
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 import { ThemeContext } from './context/theme.context';
 
 export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
-  const [isDarkTheme, setTheme] = useState<boolean>(
-    localStorage
-      ? localStorage.getItem('isDarkTheme') === 'true'
-        ? true
-        : false
-      : false
-  );
+  const [isDarkTheme, setTheme] = useState<boolean>(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('isDarkTheme');
+    if (storedTheme) {
+      setTheme(storedTheme === 'true');
+    }
+  }, []);
 
   const toggleTheme = () => {
     localStorage.setItem('isDarkTheme', isDarkTheme ? 'false' : 'true');

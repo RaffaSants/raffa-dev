@@ -6,7 +6,6 @@ import { BsBrightnessHighFill, BsMoonStarsFill } from 'react-icons/bs';
 
 export const ToggleToDarkTheme = () => {
   const { isDarkTheme, toggleTheme } = useTheme();
-  console.log(isDarkTheme);
 
   return (
     <label className="toggleTheme">
